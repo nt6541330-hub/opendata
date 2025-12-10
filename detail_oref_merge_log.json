@@ -1,0 +1,186 @@
+{
+  "id_mapping": {
+    "Th_POL-00134": "Th_POL-00122",
+    "Th_POL-00242": "Th_POL-00122",
+    "Th_POL-00205": "Th_POL-00125",
+    "Th_POL-00169": "Th_POL-00126",
+    "Th_POL-00243": "Th_POL-00126",
+    "Th_POL-00168": "Th_POL-00154",
+    "Th_POL-00263": "Th_POL-00163",
+    "Th_POL-00329": "Th_POL-00163",
+    "Th_POL-00330": "Th_POL-00164",
+    "Th_POL-00265": "Th_POL-00165",
+    "Th_POL-00331": "Th_POL-00165",
+    "Th_POL-00266": "Th_POL-00166",
+    "Th_POL-00332": "Th_POL-00166",
+    "Th_POL-00267": "Th_POL-00167",
+    "Th_POL-00199": "Th_POL-00172",
+    "Th_POL-00302": "Th_POL-00172",
+    "Th_POL-00287": "Th_POL-00173",
+    "Th_POL-00182": "Th_POL-00181",
+    "Th_POL-00228": "Th_POL-00186",
+    "Th_POL-00253": "Th_POL-00186",
+    "Th_POL-00292": "Th_POL-00186",
+    "Th_POL-00347": "Th_POL-00186",
+    "Th_POL-00307": "Th_POL-00196",
+    "Th_POL-00308": "Th_POL-00197",
+    "Th_POL-00225": "Th_POL-00224",
+    "Th_POL-00294": "Th_POL-00230",
+    "Th_POL-00236": "Th_POL-00233",
+    "Th_POL-00297": "Th_POL-00233",
+    "Th_POL-00352": "Th_POL-00233",
+    "Th_POL-00315": "Th_MIL-00011",
+    "Th_POL-00284": "Th_POL-00258",
+    "Th_POL-00322": "Th_POL-00258",
+    "Th_POL-00324": "Th_POL-00260",
+    "Th_POL-00326": "Th_POL-00262",
+    "Th_POL-00334": "Th_POL-00268",
+    "Th_POL-00344": "Th_POL-00276"
+  },
+  "merge_details": {
+    "Th_POL-00134": {
+      "merged_into": "Th_POL-00122",
+      "before_name": "日本首相高市早苗发表涉台错误言论"
+    },
+    "Th_POL-00242": {
+      "merged_into": "Th_POL-00122",
+      "before_name": "日本首相高市早苗发表涉台错误言论"
+    },
+    "Th_POL-00205": {
+      "merged_into": "Th_POL-00125",
+      "before_name": "国台办敦促日本政府恪守一个中国原则"
+    },
+    "Th_POL-00169": {
+      "merged_into": "Th_POL-00126",
+      "before_name": "高市早苗国会答辩称台湾有事构成日本存亡危机"
+    },
+    "Th_POL-00243": {
+      "merged_into": "Th_POL-00126",
+      "before_name": "高市早苗国会答辩称台湾有事构成日本存亡危机"
+    },
+    "Th_POL-00168": {
+      "merged_into": "Th_POL-00154",
+      "before_name": "日本民众抗议高市早苗涉台言论"
+    },
+    "Th_POL-00263": {
+      "merged_into": "Th_POL-00163",
+      "before_name": "中方反对高市早苗涉台言论"
+    },
+    "Th_POL-00329": {
+      "merged_into": "Th_POL-00163",
+      "before_name": "中方反对高市早苗涉台言论"
+    },
+    "Th_POL-00330": {
+      "merged_into": "Th_POL-00164",
+      "before_name": "台湾当局支持高市早苗涉台言论"
+    },
+    "Th_POL-00265": {
+      "merged_into": "Th_POL-00165",
+      "before_name": "中方要求日方收回涉台错误言论"
+    },
+    "Th_POL-00331": {
+      "merged_into": "Th_POL-00165",
+      "before_name": "中方要求日方收回涉台错误言论"
+    },
+    "Th_POL-00266": {
+      "merged_into": "Th_POL-00166",
+      "before_name": "毛宁提及日本殖民台湾历史问题"
+    },
+    "Th_POL-00332": {
+      "merged_into": "Th_POL-00166",
+      "before_name": "毛宁谴责日本殖民台湾历史"
+    },
+    "Th_POL-00267": {
+      "merged_into": "Th_POL-00167",
+      "before_name": "中方强调日方恪守一个中国原则"
+    },
+    "Th_POL-00199": {
+      "merged_into": "Th_POL-00172",
+      "before_name": "中方反对美台官方往来并重申一个中国原则"
+    },
+    "Th_POL-00302": {
+      "merged_into": "Th_POL-00172",
+      "before_name": "中方反对美台官方往来并重申一个中国原则"
+    },
+    "Th_POL-00287": {
+      "merged_into": "Th_POL-00173",
+      "before_name": "中国外交部回应台湾官员称与洪都拉斯重建关系"
+    },
+    "Th_POL-00182": {
+      "merged_into": "Th_POL-00181",
+      "before_name": "国台办说明台胞申领大陆身份证件条件"
+    },
+    "Th_POL-00228": {
+      "merged_into": "Th_POL-00186",
+      "before_name": "国台办谴责民进党当局打压陆配参政权"
+    },
+    "Th_POL-00253": {
+      "merged_into": "Th_POL-00186",
+      "before_name": "国台办谴责民进党当局剥夺陆配合法权益"
+    },
+    "Th_POL-00292": {
+      "merged_into": "Th_POL-00186",
+      "before_name": "国台办谴责民进党当局打压陆配参政权"
+    },
+    "Th_POL-00347": {
+      "merged_into": "Th_POL-00186",
+      "before_name": "国台办谴责民进党当局打压陆配"
+    },
+    "Th_POL-00307": {
+      "merged_into": "Th_POL-00196",
+      "before_name": "国台办重申“九二共识”政治基础地位"
+    },
+    "Th_POL-00308": {
+      "merged_into": "Th_POL-00197",
+      "before_name": "国台办发言人张晗重申台湾是中国的一部分"
+    },
+    "Th_POL-00225": {
+      "merged_into": "Th_POL-00224",
+      "before_name": "民进党当局解除陆配史雪燕公职"
+    },
+    "Th_POL-00294": {
+      "merged_into": "Th_POL-00230",
+      "before_name": "台湾监察委员调查大陆网红食品进口"
+    },
+    "Th_POL-00236": {
+      "merged_into": "Th_POL-00233",
+      "before_name": "国台办发言人张晗谴责赖清德‘台独’言论"
+    },
+    "Th_POL-00297": {
+      "merged_into": "Th_POL-00233",
+      "before_name": "国台办发言人张晗批评赖清德‘台独’言论"
+    },
+    "Th_POL-00352": {
+      "merged_into": "Th_POL-00233",
+      "before_name": "国台办发言人张晗谴责赖清德台独言论"
+    },
+    "Th_POL-00315": {
+      "merged_into": "Th_MIL-00011",
+      "before_name": "日本防卫大臣宣布在与那国岛部署导弹"
+    },
+    "Th_POL-00284": {
+      "merged_into": "Th_POL-00258",
+      "before_name": "台湾团体抗议反对赖清德军购政策"
+    },
+    "Th_POL-00322": {
+      "merged_into": "Th_POL-00258",
+      "before_name": "台湾团体抗议反对赖清德当局军购政策"
+    },
+    "Th_POL-00324": {
+      "merged_into": "Th_POL-00260",
+      "before_name": "台湾劳动党主席批评民进党牺牲民生"
+    },
+    "Th_POL-00326": {
+      "merged_into": "Th_POL-00262",
+      "before_name": "台湾抗议团体声明反对军购交易"
+    },
+    "Th_POL-00334": {
+      "merged_into": "Th_POL-00268",
+      "before_name": "中国外交部发言人谴责日本涉台错误言论"
+    },
+    "Th_POL-00344": {
+      "merged_into": "Th_POL-00276",
+      "before_name": "宋涛会见台湾渔业界代表团"
+    }
+  }
+}

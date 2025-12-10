@@ -1,0 +1,24 @@
+23
+event-causal-result	0
+event-causal-trigger	1
+event-combination-parallelTask	2
+event-combination-stage	3
+event-combination-subEvent	4
+event-evolution-escalate	5
+event-evolution-leadsTo	6
+event-link-alternative	7
+event-link-includes	8
+event-link-link	9
+event-link-overlap	10
+event-link-parallel	11
+event-target-organization-affectedOrganization	12
+event-target-organization-relatedOrganization	13
+event-target-organization-subjectOrganization	14
+event-target-person-relatedPerson	15
+event-target-person-subjectPerson	16
+organization-organization-joint	17
+organization-organization-subordinate	18
+organization-organization-superior	19
+person-personOrganization-affiliated	20
+target-target-operation-operatedBy	21
+target-target-position-leader	22

@@ -1,0 +1,1242 @@
+[
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00046\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00072"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00046\n关系：event-target-person-subjectPerson",
+    "output": "PER-00179"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-includes。",
+    "input": "头实体：Th_POL-00046\n关系：event-link-includes",
+    "output": "Th_POL-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-includes。",
+    "input": "头实体：Th_POL-00046\n关系：event-link-includes",
+    "output": "Th_POL-00050"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-alternative。",
+    "input": "头实体：Th_MIL-00037\n关系：event-link-alternative",
+    "output": "Th_MIL-00038"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00059\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00059\n关系：event-link-parallel",
+    "output": "Th_MIL-00060"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00059\n关系：event-link-parallel",
+    "output": "Th_MIL-00061"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00059\n关系：event-link-parallel",
+    "output": "Th_MIL-00062"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00049\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00025"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00048\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00072"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00048\n关系：event-target-person-subjectPerson",
+    "output": "PER-00179"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00048\n关系：event-target-person-subjectPerson",
+    "output": "PER-00183"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00061\n关系：event-link-parallel",
+    "output": "Th_POL-00062"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00023\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00023\n关系：event-link-parallel",
+    "output": "Th_POL-00024"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00011\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00137"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00077\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00327"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_ECON-00032\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00302"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00066\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_ECON-00001\n关系：event-link-link",
+    "output": "Th_ECON-00002"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00001\n关系：event-link-parallel",
+    "output": "Th_ECON-00003"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_POL-00032\n关系：event-causal-trigger",
+    "output": "Th_POL-00035"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00035\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00021\n关系：event-causal-result",
+    "output": "Th_POL-00022"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00021\n关系：event-causal-result",
+    "output": "Th_POL-00023"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00021\n关系：event-causal-result",
+    "output": "Th_POL-00024"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00021\n关系：event-causal-result",
+    "output": "Th_POL-00025"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_POL-00014\n关系：event-combination-parallelTask",
+    "output": "Th_POL-00015"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：target-target-position-leader。",
+    "input": "头实体：ORG-00072\n关系：target-target-position-leader",
+    "output": "PER-00183"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_ECON-00016\n关系：event-link-link",
+    "output": "Th_ECON-00017"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00036\n关系：event-target-person-relatedPerson",
+    "output": "PER-00193"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00051\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00051\n关系：event-target-person-relatedPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00051\n关系：event-link-link",
+    "output": "Th_POL-00052"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00051\n关系：event-link-link",
+    "output": "Th_POL-00053"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00051\n关系：event-link-link",
+    "output": "Th_POL-00054"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00061\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00337"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00061\n关系：event-link-parallel",
+    "output": "Th_MIL-00062"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-evolution-escalate。",
+    "input": "头实体：Th_ECON-00024\n关系：event-evolution-escalate",
+    "output": "Th_ECON-00027"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00003\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00350"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00055\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00275"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_MIL-00033\n关系：event-link-link",
+    "output": "Th_MIL-00034"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_MIL-00054\n关系：event-combination-subEvent",
+    "output": "Th_MIL-00055"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_ECON-00025\n关系：event-combination-parallelTask",
+    "output": "Th_ECON-00026"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00060\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00064\n关系：event-link-parallel",
+    "output": "Th_MIL-00065"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_ECON-00033\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00331"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_ECON-00033\n关系：event-target-person-subjectPerson",
+    "output": "PER-00184"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_ECON-00033\n关系：event-link-link",
+    "output": "Th_ECON-00034"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_ECON-00033\n关系：event-combination-subEvent",
+    "output": "Th_ECON-00035"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00020\n关系：event-target-person-subjectPerson",
+    "output": "PER-00183"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00031\n关系：event-link-parallel",
+    "output": "Th_POL-00032"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00031\n关系：event-causal-result",
+    "output": "Th_POL-00033"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_POL-00031\n关系：event-causal-trigger",
+    "output": "Th_POL-00035"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00022\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00363"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_MIL-00022\n关系：event-link-link",
+    "output": "Th_MIL-00024"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00050\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00343"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00050\n关系：event-link-parallel",
+    "output": "Th_MIL-00051"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-includes。",
+    "input": "头实体：Th_MIL-00050\n关系：event-link-includes",
+    "output": "Th_MIL-00053"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00051\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00137"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00051\n关系：event-link-parallel",
+    "output": "Th_MIL-00052"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-includes。",
+    "input": "头实体：Th_MIL-00051\n关系：event-link-includes",
+    "output": "Th_MIL-00053"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-evolution-leadsTo。",
+    "input": "头实体：Th_ECON-00009\n关系：event-evolution-leadsTo",
+    "output": "Th_ECON-00010"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00063\n关系：event-link-parallel",
+    "output": "Th_MIL-00066"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00009\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00363"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00009\n关系：event-link-parallel",
+    "output": "Th_MIL-00011"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00044\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00093"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00044\n关系：event-link-parallel",
+    "output": "Th_POL-00045"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00074\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00010"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00074\n关系：event-combination-subEvent",
+    "output": "Th_POL-00075"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00074\n关系：event-combination-subEvent",
+    "output": "Th_POL-00076"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00074\n关系：event-combination-subEvent",
+    "output": "Th_POL-00077"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00032\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00359"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00032\n关系：event-link-parallel",
+    "output": "Th_MIL-00033"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-alternative。",
+    "input": "头实体：Th_MIL-00032\n关系：event-link-alternative",
+    "output": "Th_MIL-00034"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00047\n关系：event-target-person-relatedPerson",
+    "output": "PER-00183"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00040\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00040\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00040\n关系：event-link-parallel",
+    "output": "Th_MIL-00041"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00040\n关系：event-link-parallel",
+    "output": "Th_MIL-00042"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00002\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00350"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00002\n关系：event-link-parallel",
+    "output": "Th_MIL-00003"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00016\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00337"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00016\n关系：event-link-link",
+    "output": "Th_POL-00017"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00016\n关系：event-link-link",
+    "output": "Th_POL-00018"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00016\n关系：event-causal-result",
+    "output": "Th_POL-00019"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00052\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00052\n关系：event-target-person-subjectPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_POL-00052\n关系：event-combination-parallelTask",
+    "output": "Th_POL-00053"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00052\n关系：event-link-link",
+    "output": "Th_POL-00054"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00058\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_MIL-00058\n关系：event-link-link",
+    "output": "Th_MIL-00062"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00056\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00026\n关系：event-causal-result",
+    "output": "Th_POL-00027"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00026\n关系：event-causal-result",
+    "output": "Th_POL-00028"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00026\n关系：event-causal-result",
+    "output": "Th_POL-00029"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00026\n关系：event-causal-result",
+    "output": "Th_POL-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00001\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00337"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00001\n关系：event-target-person-relatedPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00001\n关系：event-causal-result",
+    "output": "Th_POL-00002"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00001\n关系：event-link-link",
+    "output": "Th_POL-00003"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_POL-00001\n关系：event-causal-trigger",
+    "output": "Th_POL-00005"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00028\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_MIL-00028\n关系：event-combination-parallelTask",
+    "output": "Th_MIL-00029"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00012\n关系：event-link-parallel",
+    "output": "Th_ECON-00013"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00013\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_POL-00013\n关系：event-combination-parallelTask",
+    "output": "Th_POL-00014"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_POL-00013\n关系：event-combination-parallelTask",
+    "output": "Th_POL-00015"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-superior。",
+    "input": "头实体：ORG-00357\n关系：organization-organization-superior",
+    "output": "ORG-00137"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00015\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00072"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00007\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00007\n关系：event-target-person-subjectPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00007\n关系：event-link-parallel",
+    "output": "Th_POL-00008"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00007\n关系：event-link-parallel",
+    "output": "Th_POL-00009"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00041\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00041\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00041\n关系：event-link-parallel",
+    "output": "Th_MIL-00042"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-affectedOrganization。",
+    "input": "头实体：Th_MIL-00018\n关系：event-target-organization-affectedOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00039\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00039\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_MIL-00039\n关系：event-target-person-subjectPerson",
+    "output": "PER-00184"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_MIL-00039\n关系：event-causal-result",
+    "output": "Th_MIL-00043"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00024\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00024\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：target-target-operation-operatedBy。",
+    "input": "头实体：PER-00179\n关系：target-target-operation-operatedBy",
+    "output": "ORG-00072"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00065\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00067\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00057\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00057\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00043\n关系：event-link-parallel",
+    "output": "Th_POL-00044"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00043\n关系：event-link-parallel",
+    "output": "Th_POL-00045"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-superior。",
+    "input": "头实体：ORG-00302\n关系：organization-organization-superior",
+    "output": "ORG-00343"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00001\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00350"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_MIL-00001\n关系：event-causal-trigger",
+    "output": "Th_MIL-00002"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-evolution-leadsTo。",
+    "input": "头实体：Th_MIL-00001\n关系：event-evolution-leadsTo",
+    "output": "Th_MIL-00003"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_MIL-00017\n关系：event-link-link",
+    "output": "Th_MIL-00018"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_ECON-00008\n关系：event-combination-parallelTask",
+    "output": "Th_ECON-00009"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00006\n关系：event-link-parallel",
+    "output": "Th_ECON-00007"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00053\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_POL-00053\n关系：event-link-link",
+    "output": "Th_POL-00054"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00035\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00359"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_MIL-00035\n关系：event-link-link",
+    "output": "Th_MIL-00036"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_MIL-00035\n关系：event-link-link",
+    "output": "Th_MIL-00038"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00042\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00042\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_ECON-00002\n关系：event-target-person-subjectPerson",
+    "output": "PER-00183"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-overlap。",
+    "input": "头实体：Th_ECON-00002\n关系：event-link-overlap",
+    "output": "Th_ECON-00005"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00076\n关系：event-combination-subEvent",
+    "output": "Th_POL-00077"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00041\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00041\n关系：event-causal-result",
+    "output": "Th_POL-00042"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00041\n关系：event-causal-result",
+    "output": "Th_POL-00043"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00041\n关系：event-causal-result",
+    "output": "Th_POL-00044"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00041\n关系：event-causal-result",
+    "output": "Th_POL-00045"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00038\n关系：event-target-person-relatedPerson",
+    "output": "PER-00193"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00062\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00062\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00036\n关系：event-link-parallel",
+    "output": "Th_ECON-00037"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00067\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00293"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00029\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00045\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00045\n关系：event-target-person-subjectPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_ECON-00030\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00331"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-stage。",
+    "input": "头实体：Th_ECON-00030\n关系：event-combination-stage",
+    "output": "Th_ECON-00031"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_ECON-00015\n关系：event-link-link",
+    "output": "Th_ECON-00016"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_ECON-00015\n关系：event-link-link",
+    "output": "Th_ECON-00017"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-subordinate。",
+    "input": "头实体：ORG-00343\n关系：organization-organization-subordinate",
+    "output": "ORG-00302"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00049\n关系：event-link-parallel",
+    "output": "Th_MIL-00050"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00049\n关系：event-link-parallel",
+    "output": "Th_MIL-00051"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-includes。",
+    "input": "头实体：Th_MIL-00049\n关系：event-link-includes",
+    "output": "Th_MIL-00053"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00046\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00065\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00350"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00075\n关系：event-combination-subEvent",
+    "output": "Th_POL-00076"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00075\n关系：event-combination-subEvent",
+    "output": "Th_POL-00077"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-subordinate。",
+    "input": "头实体：ORG-00350\n关系：organization-organization-subordinate",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-link。",
+    "input": "头实体：Th_ECON-00019\n关系：event-link-link",
+    "output": "Th_ECON-00022"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00010\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00060"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_ECON-00031\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00343"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_ECON-00031\n关系：event-causal-trigger",
+    "output": "Th_ECON-00032"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00019\n关系：event-link-parallel",
+    "output": "Th_MIL-00020"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-superior。",
+    "input": "头实体：ORG-00086\n关系：organization-organization-superior",
+    "output": "ORG-00093"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00012\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00012\n关系：event-target-person-subjectPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_POL-00012\n关系：event-combination-parallelTask",
+    "output": "Th_POL-00013"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_POL-00012\n关系：event-combination-parallelTask",
+    "output": "Th_POL-00014"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-parallelTask。",
+    "input": "头实体：Th_POL-00012\n关系：event-combination-parallelTask",
+    "output": "Th_POL-00015"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00003\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00275"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00003\n关系：event-target-person-relatedPerson",
+    "output": "PER-00183"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00025\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00037\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00072"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00064\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00064\n关系：event-target-person-subjectPerson",
+    "output": "PER-00010"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00011\n关系：event-target-person-relatedPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_POL-00011\n关系：event-causal-trigger",
+    "output": "Th_POL-00012"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_POL-00011\n关系：event-causal-trigger",
+    "output": "Th_POL-00013"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_POL-00011\n关系：event-causal-trigger",
+    "output": "Th_POL-00014"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_POL-00011\n关系：event-causal-trigger",
+    "output": "Th_POL-00015"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00011\n关系：event-link-parallel",
+    "output": "Th_ECON-00012"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00011\n关系：event-link-parallel",
+    "output": "Th_ECON-00013"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00042\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00042\n关系：event-link-parallel",
+    "output": "Th_POL-00043"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00042\n关系：event-link-parallel",
+    "output": "Th_POL-00044"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00042\n关系：event-link-parallel",
+    "output": "Th_POL-00045"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00063\n关系：event-causal-result",
+    "output": "Th_POL-00064"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_POL-00063\n关系：event-causal-result",
+    "output": "Th_POL-00067"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_ECON-00029\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00302"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_ECON-00029\n关系：event-causal-trigger",
+    "output": "Th_ECON-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_ECON-00029\n关系：event-causal-trigger",
+    "output": "Th_ECON-00031"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00050\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00072"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00050\n关系：event-target-person-subjectPerson",
+    "output": "PER-00179"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-overlap。",
+    "input": "头实体：Th_MIL-00036\n关系：event-link-overlap",
+    "output": "Th_MIL-00038"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-alternative。",
+    "input": "头实体：Th_ECON-00023\n关系：event-link-alternative",
+    "output": "Th_ECON-00024"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_ECON-00023\n关系：event-causal-trigger",
+    "output": "Th_ECON-00027"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_MIL-00043\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00049"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00043\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-relatedPerson。",
+    "input": "头实体：Th_POL-00039\n关系：event-target-person-relatedPerson",
+    "output": "PER-00193"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00017\n关系：event-target-person-subjectPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00017\n关系：event-link-parallel",
+    "output": "Th_POL-00018"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-subordinate。",
+    "input": "头实体：ORG-00010\n关系：organization-organization-subordinate",
+    "output": "ORG-00337"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-subordinate。",
+    "input": "头实体：ORG-00010\n关系：organization-organization-subordinate",
+    "output": "ORG-00359"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00044\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00357"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-trigger。",
+    "input": "头实体：Th_MIL-00044\n关系：event-causal-trigger",
+    "output": "Th_MIL-00046"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-includes。",
+    "input": "头实体：Th_MIL-00044\n关系：event-link-includes",
+    "output": "Th_MIL-00047"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-stage。",
+    "input": "头实体：Th_MIL-00044\n关系：event-combination-stage",
+    "output": "Th_MIL-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00002\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00002\n关系：event-target-person-subjectPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00018\n关系：event-link-parallel",
+    "output": "Th_ECON-00019"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_ECON-00018\n关系：event-link-parallel",
+    "output": "Th_ECON-00021"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_ECON-00028\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00331"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-causal-result。",
+    "input": "头实体：Th_ECON-00028\n关系：event-causal-result",
+    "output": "Th_ECON-00029"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_POL-00034\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00048"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00023\n关系：event-link-parallel",
+    "output": "Th_MIL-00024"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00073\n关系：event-combination-subEvent",
+    "output": "Th_POL-00074"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00073\n关系：event-combination-subEvent",
+    "output": "Th_POL-00075"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00073\n关系：event-combination-subEvent",
+    "output": "Th_POL-00076"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-combination-subEvent。",
+    "input": "头实体：Th_POL-00073\n关系：event-combination-subEvent",
+    "output": "Th_POL-00077"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-person-subjectPerson。",
+    "input": "头实体：Th_POL-00022\n关系：event-target-person-subjectPerson",
+    "output": "PER-00199"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00022\n关系：event-link-parallel",
+    "output": "Th_POL-00023"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00022\n关系：event-link-parallel",
+    "output": "Th_POL-00024"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-relatedOrganization。",
+    "input": "头实体：Th_MIL-00060\n关系：event-target-organization-relatedOrganization",
+    "output": "ORG-00086"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00060\n关系：event-link-parallel",
+    "output": "Th_MIL-00061"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00060\n关系：event-link-parallel",
+    "output": "Th_MIL-00062"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-superior。",
+    "input": "头实体：ORG-00363\n关系：organization-organization-superior",
+    "output": "ORG-00137"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-target-organization-subjectOrganization。",
+    "input": "头实体：Th_POL-00008\n关系：event-target-organization-subjectOrganization",
+    "output": "ORG-00030"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_POL-00008\n关系：event-link-parallel",
+    "output": "Th_POL-00009"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：event-link-parallel。",
+    "input": "头实体：Th_MIL-00026\n关系：event-link-parallel",
+    "output": "Th_MIL-00028"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：organization-organization-joint。",
+    "input": "头实体：ORG-00327\n关系：organization-organization-joint",
+    "output": "ORG-00060"
+  },
+  {
+    "instruction": "根据图谱逻辑补全三元组。已知关系类型为：person-personOrganization-affiliated。",
+    "input": "头实体：PER-00010\n关系：person-personOrganization-affiliated",
+    "output": "ORG-00049"
+  }
+]

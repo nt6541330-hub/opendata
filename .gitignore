@@ -1,0 +1,20 @@
+cat > .gitignore << 'EOF'
+# 忽略大目录（数据、模型、日志等）
+checkpoints/
+
+
+# Python 编译缓存
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 虚拟环境
+venv/
+.venv/
+.env/
+
+# IDE 配置
+.vscode/
+.idea/
+EOF

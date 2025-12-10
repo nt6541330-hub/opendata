@@ -1,0 +1,110 @@
+[
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1764924992,
+    "httpOnly": true,
+    "name": "M_WEIBOCN_PARAMS",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "luicode%3D10000011%26lfid%3D102803%26uicode%3D20000174"
+  },
+  {
+    "domain": ".m.weibo.cn",
+    "expiry": 1764925592,
+    "httpOnly": false,
+    "name": "XSRF-TOKEN",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "7e6f2a"
+  },
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1764927992,
+    "httpOnly": false,
+    "name": "MLOGIN",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1"
+  },
+  {
+    "domain": ".weibo.cn",
+    "httpOnly": false,
+    "name": "SSOLoginState",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "1764924385"
+  },
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1767516390,
+    "httpOnly": false,
+    "name": "ALF",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "1767516385"
+  },
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1799484390,
+    "httpOnly": true,
+    "name": "SCF",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "Am16O584r5Flk3suKDFg1HbTBBl6oYA_n43R1BQ1r6fDhFWCpPBiC9ZaG7gntlKcJNY9YQsF_U5Jp0-17Ha9JOM."
+  },
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1764924405,
+    "httpOnly": true,
+    "name": "mweibo_short_token",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "267c72f483"
+  },
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1796460390,
+    "httpOnly": true,
+    "name": "SUB",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "_2A25ENuuxDeRhGeFJ7FsW-C3KzTqIHXVnSmF5rDV6PUJbktANLU7GkW1NfweOrlJ4bOI9t_Od43nDOFb7N4Pj19uu"
+  },
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1764950404,
+    "httpOnly": false,
+    "name": "_T_WM",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "22514541046"
+  },
+  {
+    "domain": ".weibo.cn",
+    "expiry": 1796460390,
+    "httpOnly": false,
+    "name": "SUBP",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "0033WrSXqPxfM725Ws9jqgMF55529P9D9WWkP43qKXCU8DS1yABEnsLK5NHD95QNS0M4S0n0SoqcWs4DqcjMi--NiK.Xi-2Ri--ciKnRi-zNS0MN1KMRe0qcSntt"
+  },
+  {
+    "domain": ".weibo.cn",
+    "httpOnly": true,
+    "name": "WEIBOCN_FROM",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1110006030"
+  }
+]

@@ -1,0 +1,42 @@
+
+type: uploaded file
+fileName: open_source_data/config/settings.yaml
+fullContent:
+mongo:
+  uri: "mongodb://admin:123456@127.0.0.1:8800/source_data?authSource=admin"
+  db: "source_data"
+
+collect:
+  # 全局代理
+  proxy: "127.0.0.1:7890"  # 如果不需要代理设为 null 或 ""
+
+  # 平台配置
+  platforms:
+    weibo:
+      cookie_file: "weibo_cookies.json"  # 放在项目根目录
+      max_pages: 3
+      max_comments: 50
+      collection: "source_weibo"
+      image_bucket: "fs_weibo"
+
+    toutiao:
+      driver_path: "/usr/local/bin/chromedriver"
+      stealth_path: "/hesiqi/stealth.min.js"
+      collection: "source_toutiao"
+      fs_bucket: "fs_toutiao"
+
+    cctv:
+      driver_path: "/usr/local/bin/chromedriver"
+      collection: "source_cctv"
+      fs_bucket: "fs_cctv"
+
+    xinhua:
+      driver_path: "/usr/local/bin/chromedriver"
+      collection: "source_xinHua_net"
+      fs_bucket: "fs_xinhua"
+
+    cnn:
+      driver_path: "/usr/local/bin/chromedriver"
+      collection: "source_cnn"
+      fs_bucket: "fs_cnn"
+      llm_model: "qwen3:14b"
