@@ -1,129 +1,104 @@
-from pymongo import MongoClient, errors
+import json
+import random
+from nebula3.gclient.net import ConnectionPool
+from nebula3.Config import Config
 
-# ========== 1. 配置区域（按你实际情况修改） ==========
-
-# 如果是本机无账号密码，大概率是这个：
-# MONGO_URI = "mongodb://127.0.0.1:27017"
-
-# 如果有账号密码就用这个形式：
-# MONGO_URI = "mongodb://username:password@127.0.0.1:27017/?authSource=admin"
-
-MONGO_URI = "mongodb://root:123456@39.104.200.88:41004/?authSource=admin"  # TODO：改成你自己的
-
-SOURCE_DB_NAME = "source_data"
-TARGET_DB_NAME = "NEWS"
-
-BATCH_SIZE = 1000  # 每次批量写入多少条，可根据数据量和内存酌情调整
+# === 配置信息 ===
+NEBULA_IP = "39.104.200.88"
+NEBULA_PORT = 41003
+USER = "root"
+PASSWORD = "123456"
+SPACE_NAME = "event_target1"
 
 
-# ========== 2. 公共函数：按批复制集合，遇到重复 _id 跳过 ==========
+def fetch_and_generate_json():
+    # 1. 连接数据库
+    config = Config()
+    config.max_connection_pool_size = 5
+    pool = ConnectionPool()
+    if not pool.init([(NEBULA_IP, NEBULA_PORT)], config):
+        print("无法连接到 NebulaGraph")
+        return
 
-def copy_collection_append(client, src_db_name, dst_db_name,
-                           src_coll_name, dst_coll_name=None,
-                           batch_size=1000):
+    session = pool.get_session(USER, PASSWORD)
+    session.execute(f'USE {SPACE_NAME}')
+
+    # 2. 随机采样查询
+    # 获取 15 条有关系的边，并尝试获取 name 或 event_name 属性
+    print("正在从数据库采样数据...")
+
+    # 这里的查询尝试获取边的类型，以及起止点的名称
+    # 如果点是事件，通常有 event_name；如果是人/组织，通常有 name
+    gql = """
+    MATCH (h)-[e]->(t)
+    RETURN 
+        id(h) as h_id, properties(h).name as h_name, properties(h).event_name as h_evt_name,
+        type(e) as r_type,
+        id(t) as t_id, properties(t).name as t_name, properties(t).event_name as t_evt_name
+    LIMIT 15;
     """
-    从 src_db.src_coll_name 读取数据，追加到 dst_db.dst_coll_name
-    - 相同 _id：忽略（不覆盖原有数据）
-    - 不同 _id：插入
-    """
-    if dst_coll_name is None:
-        dst_coll_name = src_coll_name
 
-    src_db = client[src_db_name]
-    dst_db = client[dst_db_name]
+    result = session.execute(gql)
+    if not result.is_succeeded():
+        print(f"查询失败: {result.error_msg()}")
+        return
 
-    src_coll = src_db[src_coll_name]
-    dst_coll = dst_db[dst_coll_name]
+    graph_data = []
 
-    print(f"Start sync: {src_db_name}.{src_coll_name}  ->  {dst_db_name}.{dst_coll_name}")
+    # 3. 处理结果
+    size = result.row_size()
+    for i in range(size):
+        row = result.row_values(i)
 
-    cursor = src_coll.find({}, no_cursor_timeout=True)
-    total_read = 0
-    total_inserted = 0
-    batch = []
+        # 获取 ID
+        h_val = row[0].as_string()
+        t_val = row[4].as_string()
+        r_val = row[3].as_string()  # 关系名
 
-    try:
-        for doc in cursor:
-            batch.append(doc)
-            total_read += 1
+        # 尝试获取更友好的名称 (优先用 name/event_name，没有就用 ID)
+        # Nebula 返回的是 Value 对象，需要判断是否为空
+        h_name_prop = row[1].as_string() if not row[1].is_null() else ""
+        h_evt_prop = row[2].as_string() if not row[2].is_null() else ""
 
-            if len(batch) >= batch_size:
-                inserted = _insert_batch_ignore_dup(dst_coll, batch)
-                total_inserted += inserted
-                batch = []
-                print(f"  processed: {total_read} docs, inserted: {total_inserted} docs")
+        t_name_prop = row[5].as_string() if not row[5].is_null() else ""
+        t_evt_prop = row[6].as_string() if not row[6].is_null() else ""
 
-        # 最后一批
-        if batch:
-            inserted = _insert_batch_ignore_dup(dst_coll, batch)
-            total_inserted += inserted
-            print(f"  processed: {total_read} docs, inserted: {total_inserted} docs")
+        # 决定 h 的显示名称
+        final_h = h_name_prop if h_name_prop else (h_evt_prop if h_evt_prop else h_val)
+        # 决定 t 的显示名称
+        final_t = t_name_prop if t_name_prop else (t_evt_prop if t_evt_prop else t_val)
 
-    finally:
-        cursor.close()
+        # 构造三元组
+        graph_data.append({
+            "h": final_h,
+            "r": r_val,  # 这里保持数据库原本的英文关系名，或者你可以手动映射
+            "t": final_t
+        })
 
-    print(f"Done: {src_db_name}.{src_coll_name} -> {dst_db_name}.{dst_coll_name}, "
-          f"read={total_read}, inserted={total_inserted}")
-    print("-" * 60)
+    # 4. 构造最终请求体
+    payload = {
+        "graph": graph_data,
+        "params": {
+            "which": "all",
+            "query_space": "observed",
+            "conf": 0.2,  # 融合分数阈值
+            "topk_recall": 120,
+            "topm_rerank": 20,
+            "top_degree_k": 0,
+            "sample_rate": 1.0,
+            "budget_seconds": 0,
+            "max_return": 5,
+            "llm_only_on_oov": False
+        }
+    }
 
+    print("\n" + "=" * 20 + " 生成的测试 JSON " + "=" * 20)
+    print(json.dumps(payload, indent=2, ensure_ascii=False))
+    print("=" * 60)
 
-def _insert_batch_ignore_dup(dst_coll, batch):
-    """批量插入，忽略 duplicate key (_id 冲突) 错误"""
-    try:
-        dst_coll.insert_many(batch, ordered=False)
-        return len(batch)
-    except errors.BulkWriteError as bwe:
-        # 检查是不是除了 11000 以外的错误
-        write_errors = bwe.details.get("writeErrors", [])
-        for err in write_errors:
-            if err.get("code") != 11000:
-                # 如果有别的错误就抛出，让你看到问题
-                raise
-
-        # 只有重复键错误，说明部分/全部已经存在，忽略即可
-        n_inserted = bwe.details.get("nInserted", 0)
-        return n_inserted
-
-
-# ========== 3. 主逻辑：具体要同步哪些集合 ==========
-
-def main():
-    client = MongoClient(MONGO_URI)
-
-    # 3.1 业务集合：source_cctv
-    copy_collection_append(
-        client,
-        SOURCE_DB_NAME,
-        TARGET_DB_NAME,
-        "extract_element_event",
-        "extract_element_event",
-        batch_size=BATCH_SIZE,
-    )
-
-    # # 3.2 GridFS 的 files 集合：fs_cctv.files
-    # # 如果你确实用 GridFS 存 CCTV 图片，这两行要保留
-    # # 如果图片其实是外部对象存储，只需要上面的 source_cctv 同步即可，把下面两段注释掉
-    # copy_collection_append(
-    #     client,
-    #     SOURCE_DB_NAME,
-    #     TARGET_DB_NAME,
-    #     "fs_xinhua.files",
-    #     "fs_xinhua.files",
-    #     batch_size=BATCH_SIZE,
-    # )
-    #
-    # # 3.3 GridFS 的 chunks 集合：fs_cctv.chunks
-    # copy_collection_append(
-    #     client,
-    #     SOURCE_DB_NAME,
-    #     TARGET_DB_NAME,
-    #     "fs_xinhua.chunks",
-    #     "fs_xinhua.chunks",
-    #     batch_size=BATCH_SIZE,
-    # )
-
-    client.close()
+    session.release()
+    pool.close()
 
 
 if __name__ == "__main__":
-    main()
+    fetch_and_generate_json()

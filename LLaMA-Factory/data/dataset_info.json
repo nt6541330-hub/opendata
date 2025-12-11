@@ -1,0 +1,10 @@
+{
+  "kgc_train": {
+    "file_name": "kgc_train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}
