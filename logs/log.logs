@@ -1,55 +1,53 @@
 nohup: ignoring input
-2025-12-11 12:10:24 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
-2025-12-11 12:10:24 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 15:16:33 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 15:16:33 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
 /home/vipuser/miniconda3/envs/kaiyuan/lib/python3.11/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
   import pkg_resources
 WARNING:  Current configuration will not reload as not all conditions are met, please refer to documentation.
-INFO:     Started server process [2374457]
+INFO:     Started server process [2495741]
 INFO:     Waiting for application startup.
-2025-12-11 12:10:31 | INFO | tools.api_tools | 正在初始化工具集预热任务...
-2025-12-11 12:10:31 | INFO | semantic.pipeline | 🔄 [Semantic] 自动监控已启动 (检测频率: 60s)
+>>> [KG Module] 服务初始化...
+2025-12-11 15:16:39 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+`torch_dtype` is deprecated! Use `dtype` instead!
+    NebulaGraph 连接成功 (用于名称解析兜底)
+    正在构建 名称-ID 索引...
+    索引构建完成: 4964 个名称指向 2808 个实体。
+    [Sample Index] [('Th_POL-04157', 'Th_POL-04157'), ('中方要求日方收回涉台错误言论', 'Th_POL-04057'), ('Th_POL-04032', 'Th_POL-04032'), ('日本首相高市早苗发表涉台挑衅言论', 'Th_POL-02021'), ('Th_POL-01864', 'Th_POL-01864')]
+    Loading TransE vectors...
+    Loading LLM (Base + LoRA)...
+2025-12-11 15:16:41 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.58s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.89s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.71s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.89s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.49s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.62s/it]
+    LLM 加载成功
+>>> [KG Module] 初始化完成
+>>> [KGE] 正在加载 Tokenizer...
+>>> [KGE] 正在加载 Model...
+2025-12-11 15:16:50 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.32it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.38it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.40it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:02<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:02<00:00,  2.04it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:02<00:00,  1.71it/s]
+/home/vipuser/miniconda3/envs/kaiyuan/lib/python3.11/site-packages/peft/utils/save_and_load.py:546: UserWarning: Some weights of PeftModelForCausalLM were not initialized from the model checkpoint and are being ignored because you passed `ignore_mismatched_sizes=True`: - base_model.model.lm_head.weight: found shape torch.Size([151670, 4096]) in the checkpoint and torch.Size([151936, 4096]) in the model instantiated
+- base_model.model.model.embed_tokens.weight: found shape torch.Size([151670, 4096]) in the checkpoint and torch.Size([151936, 4096]) in the model instantiated.
+  warnings.warn(msg)
+✅ [KGE] LoRA Adapter 加载成功
+2025-12-11 15:16:55 | INFO | tools.api_tools | 正在初始化工具集预热任务...
 INFO:     Application startup complete.
-2025-12-11 12:10:31 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
-2025-12-11 12:10:31 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 15:16:55 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 15:16:55 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
 Building prefix dict from the default dictionary ...
-2025-12-11 12:10:31 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 15:16:55 | DEBUG | jieba | Building prefix dict from the default dictionary ...
 Loading model from cache /tmp/jieba.cache
-2025-12-11 12:10:31 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
-2025-12-11 12:10:32 | INFO | semantic.pipeline | 🚀 [Semantic] 触发执行: 数量阈值触发 (积压 10190 条)
-Loading model cost 0.732 seconds.
-2025-12-11 12:10:32 | DEBUG | jieba | Loading model cost 0.732 seconds.
+2025-12-11 15:16:55 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+Loading model cost 0.728 seconds.
+2025-12-11 15:16:56 | DEBUG | jieba | Loading model cost 0.728 seconds.
 Prefix dict has been built successfully.
-2025-12-11 12:10:32 | DEBUG | jieba | Prefix dict has been built successfully.
-2025-12-11 12:10:32 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
-2025-12-11 12:10:32 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 15:16:56 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 15:16:56 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 15:16:56 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
 Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
-2025-12-11 12:10:34 | INFO | semantic.pipeline | 📥 [Semantic] 本次增量处理数据: 200 条
-2025-12-11 12:10:34 | INFO | semantic.pipeline | 📊 [Hotspot] 当前新数据累积池: 400 / 200
-2025-12-11 12:10:34 | INFO | semantic.pipeline | 🔥 [Step 1] 累积新数据达到阈值 (400 >= 200)，执行全量热点更新...
-🔥 开始热点事件识别 (Sources: ['source_weibo', 'source_cctv', 'source_toutiao', 'source_xinHua_net', 'source_cnn'])
-[Hotspot] Loading Embedding Model: BAAI/bge-m3
-2025-12-11 12:10:34 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cuda:0
-2025-12-11 12:10:34 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: BAAI/bge-m3
 Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
 Device set to use cuda:0
-2025-12-11 12:10:38 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
-2025-12-11 12:10:38 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 15:16:59 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 15:16:59 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
 INFO:     Uvicorn running on http://0.0.0.0:8801 (Press CTRL+C to quit)
-2025-12-11 12:10:42 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
-[Hotspot] 数据加载限制: 每源 5000 条
-[Hotspot] 融合了 5 个源, 共加载 5997 条新闻 (模式: 全量/无时间窗口)
-Batches:   0%|          | 0/94 [00:00<?, ?it/s]Batches:   1%|          | 1/94 [00:02<03:14,  2.09s/it]Batches:   2%|▏         | 2/94 [00:03<02:40,  1.74s/it]Batches:   3%|▎         | 3/94 [00:05<02:53,  1.91s/it]INFO:     117.71.104.18:37832 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-Batches:   4%|▍         | 4/94 [00:07<02:37,  1.75s/it]Batches:   5%|▌         | 5/94 [00:08<02:27,  1.65s/it]Batches:   6%|▋         | 6/94 [00:10<02:24,  1.64s/it]Batches:   7%|▋         | 7/94 [00:11<02:21,  1.63s/it]INFO:     117.71.104.18:37832 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-Batches:   9%|▊         | 8/94 [00:13<02:26,  1.71s/it]Batches:  10%|▉         | 9/94 [00:15<02:24,  1.70s/it]Batches:  11%|█         | 10/94 [00:17<02:19,  1.65s/it]Batches:  12%|█▏        | 11/94 [00:18<02:15,  1.64s/it]Batches:  13%|█▎        | 12/94 [00:20<02:15,  1.66s/it]Batches:  14%|█▍        | 13/94 [00:21<02:10,  1.61s/it]Batches:  15%|█▍        | 14/94 [00:23<02:11,  1.64s/it]Batches:  16%|█▌        | 15/94 [00:25<02:07,  1.61s/it]Batches:  17%|█▋        | 16/94 [00:26<02:05,  1.61s/it]Batches:  18%|█▊        | 17/94 [00:28<02:03,  1.60s/it]Batches:  19%|█▉        | 18/94 [00:29<02:00,  1.58s/it]Batches:  20%|██        | 19/94 [00:31<01:57,  1.57s/it]Batches:  21%|██▏       | 20/94 [00:32<01:55,  1.56s/it]Batches:  22%|██▏       | 21/94 [00:34<01:52,  1.54s/it]Batches:  23%|██▎       | 22/94 [00:35<01:50,  1.53s/it]Batches:  24%|██▍       | 23/94 [00:37<01:48,  1.53s/it]Batches:  26%|██▌       | 24/94 [00:38<01:47,  1.54s/it]Batches:  27%|██▋       | 25/94 [00:40<01:46,  1.54s/it]Batches:  28%|██▊       | 26/94 [00:42<01:46,  1.57s/it]Batches:  29%|██▊       | 27/94 [00:43<01:43,  1.54s/it]Batches:  30%|██▉       | 28/94 [00:45<01:40,  1.52s/it]Batches:  31%|███       | 29/94 [00:46<01:38,  1.51s/it]Batches:  32%|███▏      | 30/94 [00:48<01:35,  1.50s/it]Batches:  33%|███▎      | 31/94 [00:49<01:36,  1.53s/it]Batches:  34%|███▍      | 32/94 [00:51<01:34,  1.52s/it]Batches:  35%|███▌      | 33/94 [00:52<01:32,  1.51s/it]Batches:  36%|███▌      | 34/94 [00:54<01:30,  1.51s/it]Batches:  37%|███▋      | 35/94 [00:55<01:29,  1.51s/it]Batches:  38%|███▊      | 36/94 [00:57<01:30,  1.56s/it]Batches:  39%|███▉      | 37/94 [00:58<01:27,  1.53s/it]Batches:  40%|████      | 38/94 [01:00<01:24,  1.52s/it]Batches:  41%|████▏     | 39/94 [01:01<01:22,  1.50s/it]Batches:  43%|████▎     | 40/94 [01:03<01:21,  1.51s/it]Batches:  44%|████▎     | 41/94 [01:04<01:21,  1.55s/it]Batches:  45%|████▍     | 42/94 [01:06<01:20,  1.54s/it]Batches:  46%|████▌     | 43/94 [01:08<01:19,  1.56s/it]Batches:  47%|████▋     | 44/94 [01:09<01:17,  1.54s/it]Batches:  48%|████▊     | 45/94 [01:10<01:12,  1.47s/it]Batches:  49%|████▉     | 46/94 [01:12<01:10,  1.47s/it]Batches:  50%|█████     | 47/94 [01:13<01:06,  1.42s/it]Batches:  51%|█████     | 48/94 [01:15<01:05,  1.42s/it]Batches:  52%|█████▏    | 49/94 [01:16<00:59,  1.32s/it]Batches:  53%|█████▎    | 50/94 [01:17<00:58,  1.34s/it]Batches:  54%|█████▍    | 51/94 [01:18<00:57,  1.34s/it]Batches:  55%|█████▌    | 52/94 [01:19<00:53,  1.27s/it]Batches:  56%|█████▋    | 53/94 [01:21<00:49,  1.20s/it]Batches:  57%|█████▋    | 54/94 [01:22<00:47,  1.18s/it]Batches:  59%|█████▊    | 55/94 [01:23<00:44,  1.14s/it]Batches:  60%|█████▉    | 56/94 [01:24<00:44,  1.16s/it]Batches:  61%|██████    | 57/94 [01:25<00:42,  1.16s/it]Batches:  62%|██████▏   | 58/94 [01:26<00:41,  1.15s/it]Batches:  63%|██████▎   | 59/94 [01:27<00:39,  1.14s/it]Batches:  64%|██████▍   | 60/94 [01:28<00:36,  1.08s/it]Batches:  65%|██████▍   | 61/94 [01:29<00:34,  1.04s/it]Batches:  66%|██████▌   | 62/94 [01:30<00:33,  1.04s/it]Batches:  67%|██████▋   | 63/94 [01:31<00:32,  1.04s/it]Batches:  68%|██████▊   | 64/94 [01:32<00:30,  1.01s/it]Batches:  69%|██████▉   | 65/94 [01:33<00:28,  1.01it/s]Batches:  70%|███████   | 66/94 [01:34<00:26,  1.07it/s]Batches:  71%|███████▏  | 67/94 [01:35<00:24,  1.10it/s]Batches:  72%|███████▏  | 68/94 [01:36<00:23,  1.10it/s]Batches:  73%|███████▎  | 69/94 [01:37<00:22,  1.13it/s]Batches:  74%|███████▍  | 70/94 [01:37<00:20,  1.20it/s]Batches:  76%|███████▌  | 71/94 [01:38<00:17,  1.29it/s]Batches:  77%|███████▋  | 72/94 [01:39<00:16,  1.30it/s]Batches:  78%|███████▊  | 73/94 [01:39<00:15,  1.34it/s]Batches:  79%|███████▊  | 74/94 [01:40<00:14,  1.34it/s]Batches:  80%|███████▉  | 75/94 [01:41<00:14,  1.36it/s]Batches:  81%|████████  | 76/94 [01:41<00:12,  1.45it/s]Batches:  82%|████████▏ | 77/94 [01:42<00:11,  1.53it/s]Batches:  83%|████████▎ | 78/94 [01:43<00:10,  1.60it/s]Batches:  84%|████████▍ | 79/94 [01:43<00:09,  1.62it/s]Batches:  85%|████████▌ | 80/94 [01:44<00:08,  1.69it/s]Batches:  86%|████████▌ | 81/94 [01:44<00:07,  1.69it/s]Batches:  87%|████████▋ | 82/94 [01:45<00:07,  1.71it/s]Batches:  88%|████████▊ | 83/94 [01:45<00:06,  1.73it/s]Batches:  89%|████████▉ | 84/94 [01:46<00:05,  1.83it/s]Batches:  90%|█████████ | 85/94 [01:46<00:04,  1.87it/s]Batches:  91%|█████████▏| 86/94 [01:47<00:03,  2.03it/s]Batches:  93%|█████████▎| 87/94 [01:47<00:03,  2.07it/s]Batches:  94%|█████████▎| 88/94 [01:48<00:02,  2.19it/s]Batches:  95%|█████████▍| 89/94 [01:48<00:02,  2.43it/s]Batches:  96%|█████████▌| 90/94 [01:48<00:01,  2.69it/s]Batches:  97%|█████████▋| 91/94 [01:48<00:00,  3.06it/s]Batches:  98%|█████████▊| 92/94 [01:49<00:00,  3.54it/s]Batches:  99%|█████████▉| 93/94 [01:49<00:00,  4.18it/s]Batches: 100%|██████████| 94/94 [01:49<00:00,  1.16s/it]
-INFO:     117.71.104.18:30771 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:64513 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:30177 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:35619 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:57248 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:24287 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:21230 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:27923 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:2178 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:43081 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:11193 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:36822 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+2025-12-11 15:17:02 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+INFO:     117.71.104.18:29779 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+INFO:     117.71.104.18:61088 - "GET /tools/wordcloud/generate?keyword=ggg HTTP/1.1" 200 OK
+INFO:     117.71.104.18:26587 - "POST /tools/capture/run HTTP/1.1" 200 OK

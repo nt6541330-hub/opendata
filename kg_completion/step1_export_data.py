@@ -1,3 +1,4 @@
+# 文件路径: open_source_data/kg_completion/step1_export_data.py
 import json
 import os
 import numpy as np
@@ -27,14 +28,19 @@ def main():
     entities = set()
     relations = set()
 
+    # 记录 细分关系 -> 边类型 的映射，供回写使用
+    # 格式: {"event-causal-result": "event_event_rel"}
+    relation_map = {}
+
     with pool.session_context(NEBULA_CONFIG["user"], NEBULA_CONFIG["password"]) as session:
         session.execute(f'USE {NEBULA_CONFIG["space"]}')
 
-        # 修正: 使用 type(e) 获取真实的 Edge Type
+        # === 核心修正：获取 properties(e).relation ===
         query = """
         MATCH (h)-[e]->(t) 
         RETURN 
             id(h) AS h_id, properties(h) AS h_props,
+            properties(e).relation AS rel_prop,
             type(e) AS rel_type, 
             id(t) AS t_id, properties(t) AS t_props
         LIMIT 20000;
@@ -49,35 +55,51 @@ def main():
         for i in range(result.row_size()):
             row = result.row_values(i)
             h_id = row[0].as_string()
-            r_type = row[2].as_string()
-            t_id = row[3].as_string()
+
+            # === 优先取 relation 属性，没有则取 Edge Type ===
+            r_prop = row[2].as_string() if not row[2].is_null() else None
+            r_type_label = row[3].as_string()  # 这是 Edge Type，如 event_event_rel
+
+            # 最终用于训练的关系名
+            final_r = r_prop if r_prop else r_type_label
+
+            # 记录映射关系
+            if final_r not in relation_map:
+                relation_map[final_r] = r_type_label
+
+            t_id = row[4].as_string()
 
             h_props = row[1].as_map() if row[1].is_map() else {}
-            t_props = row[4].as_map() if row[4].is_map() else {}
+            t_props = row[5].as_map() if row[5].is_map() else {}
 
-            # 清洗双引号，避免 JSON 报错
+            # 清洗双引号
             h_props = {k: str(v).replace('"', "'") for k, v in h_props.items()}
             t_props = {k: str(v).replace('"', "'") for k, v in t_props.items()}
 
             raw_data.append({
-                "h": h_id, "r": r_type, "t": t_id,
+                "h": h_id, "r": final_r, "t": t_id,
                 "h_desc": format_props(h_id, h_props),
                 "t_desc": format_props(t_id, t_props)
             })
             entities.add(h_id)
             entities.add(t_id)
-            relations.add(r_type)
+            relations.add(final_r)
 
     # --- 1. 生成 TransE 训练数据 ---
-    print("    生成 TransE 数据...")
+    print(f"    提取到 {len(entities)} 个实体, {len(relations)} 种细分关系。")
+
     ent2id = {e: i for i, e in enumerate(sorted(entities))}
     rel2id = {r: i for i, r in enumerate(sorted(relations))}
 
-    # 保存映射 (后续推理需要)
+    # 保存映射
     with open(os.path.join(TRANSE_DIR, 'entity2id.json'), 'w') as f:
         json.dump(ent2id, f)
     with open(os.path.join(TRANSE_DIR, 'relation2id.json'), 'w') as f:
         json.dump(rel2id, f)
+
+    # 保存关系映射表 (新增)
+    with open(os.path.join(TRANSE_DIR, 'relation_map.json'), 'w') as f:
+        json.dump(relation_map, f, indent=2)
 
     # 保存训练三元组
     triples = []
@@ -93,7 +115,7 @@ def main():
         sft_data.append({
             "instruction": "知识图谱补全任务：根据头实体和关系类型，预测尾实体。",
             "input": f"头实体信息: {item['h_desc']}\n关系类型: {item['r']}",
-            "output": item['t_desc']  # 让模型学会输出包含属性的完整描述
+            "output": item['t_desc']
         })
 
     with open(os.path.join(LLM_DIR, 'kgc_train.json'), 'w', encoding='utf-8') as f:

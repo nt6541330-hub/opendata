@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     # ========== MongoDB 配置 ==========
     MONGO_URI: str = "mongodb://root:123456@39.104.200.88:41004/?authSource=admin"
-    MONGO_DB_NAME: str = "source_data"
+    MONGO_DB_NAME: str = "NEWS"
 
     # --- 集合名称 ---
     COLL_WEIBO: str = "source_weibo"

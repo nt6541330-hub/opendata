@@ -846,3 +846,385 @@
 2025-12-11 12:10:38 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
 2025-12-11 12:10:38 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
 2025-12-11 12:10:42 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 13:48:49 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 13:48:49 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 13:50:20 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 13:50:20 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 13:50:25 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 13:50:26 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 13:50:32 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 13:50:32 | INFO | semantic.pipeline | 🔄 [Semantic] 自动监控已启动 (检测频率: 60s)
+2025-12-11 13:50:32 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 13:50:32 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 13:50:32 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 13:50:32 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 13:50:33 | DEBUG | jieba | Loading model cost 0.756 seconds.
+2025-12-11 13:50:33 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 13:50:33 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 13:50:33 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 13:50:33 | INFO | semantic.pipeline | 🚀 [Semantic] 触发执行: 数量阈值触发 (积压 9990 条)
+2025-12-11 13:50:35 | INFO | semantic.pipeline | 📥 [Semantic] 本次增量处理数据: 200 条
+2025-12-11 13:50:35 | INFO | semantic.pipeline | 📊 [Hotspot] 当前新数据累积池: 400 / 200
+2025-12-11 13:50:35 | INFO | semantic.pipeline | 🔥 [Step 1] 累积新数据达到阈值 (400 >= 200)，执行全量热点更新...
+2025-12-11 13:50:35 | INFO | sentence_transformers.SentenceTransformer | Use pytorch device_name: cuda:0
+2025-12-11 13:50:35 | INFO | sentence_transformers.SentenceTransformer | Load pretrained SentenceTransformer: BAAI/bge-m3
+2025-12-11 13:50:42 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 13:50:42 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 13:50:46 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 13:51:48 | WARNING | nebula3.logger | Closing a connection that is in use
+2025-12-11 14:02:30 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 14:02:30 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 14:02:38 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 14:02:40 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:02:56 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:03:02 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 14:03:03 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 14:03:03 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 14:03:03 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 14:03:03 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 14:03:03 | DEBUG | jieba | Loading model cost 0.731 seconds.
+2025-12-11 14:03:03 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 14:03:03 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 14:03:03 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 14:03:10 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 14:03:10 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 14:03:13 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 14:25:10 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 14:25:10 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 14:25:16 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 14:25:17 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:25:29 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:25:36 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 14:25:36 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 14:25:36 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 14:25:36 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 14:25:36 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 14:25:36 | DEBUG | jieba | Loading model cost 0.723 seconds.
+2025-12-11 14:25:36 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 14:25:36 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 14:25:36 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 14:25:40 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 14:25:40 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 14:25:42 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 14:26:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:26:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:26:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:26:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:26:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:27:04 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:27:11 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:27:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:27:39 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:27:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:28:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:28:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:28:16 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:28:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:28:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:28:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:33:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:33:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-12-11 14:45:28 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 14:45:28 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 14:45:37 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 14:45:39 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:46:14 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:46:33 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 14:46:33 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 14:46:33 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 14:46:33 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 14:46:33 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 14:46:34 | DEBUG | jieba | Loading model cost 0.764 seconds.
+2025-12-11 14:46:34 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 14:46:34 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 14:46:34 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 14:46:42 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 14:46:42 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 14:46:45 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 14:57:21 | WARNING | nebula3.logger | Closing a connection that is in use
+2025-12-11 14:57:36 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 14:57:36 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 14:57:44 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 14:57:45 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:58:00 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 14:58:08 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 14:58:08 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 14:58:08 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 14:58:08 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 14:58:08 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 14:58:08 | DEBUG | jieba | Loading model cost 0.794 seconds.
+2025-12-11 14:58:08 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 14:58:08 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 14:58:08 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 14:58:13 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 14:58:13 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 14:58:16 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 15:16:33 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 15:16:33 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 15:16:39 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 15:16:41 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 15:16:50 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 15:16:55 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 15:16:55 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 15:16:55 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 15:16:55 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 15:16:55 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 15:16:56 | DEBUG | jieba | Loading model cost 0.728 seconds.
+2025-12-11 15:16:56 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 15:16:56 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 15:16:56 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 15:16:59 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 15:16:59 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 15:17:02 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 15:20:07 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 15:20:07 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 15:20:13 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 15:20:15 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 15:20:21 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 15:20:26 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 15:20:26 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 15:20:26 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 15:20:26 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 15:20:26 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 15:20:27 | DEBUG | jieba | Loading model cost 0.681 seconds.
+2025-12-11 15:20:27 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 15:20:27 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 15:20:27 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 15:20:29 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 15:20:29 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 15:20:31 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-11 15:23:29 | INFO | tools.capture_engine.api | [CaptureEngine] Task Initialized: 1995405712146067458
+2025-12-11 15:23:29 | INFO | tools.capture_engine.api | [CaptureEngine] Scheduler started for 1995405712146067458
+2025-12-11 15:23:29 | INFO | tools.capture_engine.platforms.toutiao | [Toutiao] Task started. TaskID=1995405712146067458
+2025-12-11 15:23:29 | INFO | tools.capture_engine.platforms.weibo | [Weibo] Task started. TaskID=1995405712146067458
+2025-12-11 15:23:29 | INFO | tools.capture_engine.platforms.weibo | [Weibo] Searching: 大陆
+2025-12-11 15:23:29 | INFO | tools.capture_engine.platforms.cctv | [CCTV] Task started. TaskID=1995405712146067458
+2025-12-11 15:23:29 | INFO | tools.capture_engine.platforms.xinhua | [Xinhua] Task started. TaskID=1995405712146067458
+2025-12-11 15:23:29 | INFO | tools.capture_engine.platforms.cnn | [CNN] Task started. TaskID=1995405712146067458
+2025-12-11 15:23:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%A4%A7%E9%99%86&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-11 15:23:30 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/504e8109gy1i86n250xvuj20ku0dggmm.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:23:31 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242579595561117 Time: 2025-12-11 08:10:41
+2025-12-11 15:23:31 | INFO | tools.capture_engine.platforms.weibo |    [1] Saved: 5242579595561117
+2025-12-11 15:23:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242579595561117&mid=5242579595561117 "HTTP/1.1 200 OK"
+2025-12-11 15:23:31 | INFO | tools.capture_engine.platforms.xinhua | [Xinhua] Searching: 大陆
+2025-12-11 15:23:31 | INFO | tools.capture_engine.platforms.cctv | [CCTV] Searching: 大陆
+2025-12-11 15:23:31 | INFO | tools.capture_engine.platforms.cnn | [CNN] Searching: 大陆
+2025-12-11 15:23:31 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/504e8109gy1i86n250xvuj20ku0dggmm.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:23:32 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242579595561117 Time: 2025-12-11 08:10:41
+2025-12-11 15:23:32 | INFO | tools.capture_engine.platforms.weibo |    [2] Saved: 5242579595561117
+2025-12-11 15:23:32 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242393651843626 Time: 2025-12-10 19:51:48
+2025-12-11 15:23:32 | INFO | tools.capture_engine.platforms.weibo |    [3] Saved: 5242393651843626
+2025-12-11 15:23:32 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242393651843626&mid=5242393651843626 "HTTP/1.1 200 OK"
+2025-12-11 15:23:32 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242393651843626 Time: 2025-12-10 19:51:48
+2025-12-11 15:23:32 | INFO | tools.capture_engine.platforms.weibo |    [4] Saved: 5242393651843626
+2025-12-11 15:23:32 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242082584694225 Time: 2025-12-09 23:15:44
+2025-12-11 15:23:32 | INFO | tools.capture_engine.platforms.weibo |    [5] Saved: 5242082584694225
+2025-12-11 15:23:32 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242082584694225&mid=5242082584694225 "HTTP/1.1 200 OK"
+2025-12-11 15:23:33 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242082584694225 Time: 2025-12-09 23:15:44
+2025-12-11 15:23:33 | INFO | tools.capture_engine.platforms.weibo |    [6] Saved: 5242082584694225
+2025-12-11 15:23:33 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242452451262946 Time: 2025-12-10 23:45:27
+2025-12-11 15:23:33 | INFO | tools.capture_engine.platforms.weibo |    [7] Saved: 5242452451262946
+2025-12-11 15:23:33 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242452451262946&mid=5242452451262946 "HTTP/1.1 200 OK"
+2025-12-11 15:23:33 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242452451262946 Time: 2025-12-10 23:45:27
+2025-12-11 15:23:33 | INFO | tools.capture_engine.platforms.weibo |    [8] Saved: 5242452451262946
+2025-12-11 15:23:33 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/008z3CJcgy1i82fjq3eoej30ne0qs0yd.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:23:34 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241280307136090 Time: 2025-12-07 18:07:46
+2025-12-11 15:23:34 | INFO | tools.capture_engine.platforms.weibo |    [9] Saved: 5241280307136090
+2025-12-11 15:23:34 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5241280307136090&mid=5241280307136090 "HTTP/1.1 200 OK"
+2025-12-11 15:23:34 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/008z3CJcgy1i82fjq3eoej30ne0qs0yd.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:23:35 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241280307136090 Time: 2025-12-07 18:07:46
+2025-12-11 15:23:35 | INFO | tools.capture_engine.platforms.weibo |    [10] Saved: 5241280307136090
+2025-12-11 15:23:35 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241678237270455 Time: 2025-12-08 20:29:00
+2025-12-11 15:23:35 | INFO | tools.capture_engine.platforms.weibo |    [11] Saved: 5241678237270455
+2025-12-11 15:23:35 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5241678237270455&mid=5241678237270455 "HTTP/1.1 200 OK"
+2025-12-11 15:23:36 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241678237270455 Time: 2025-12-08 20:29:00
+2025-12-11 15:23:36 | INFO | tools.capture_engine.platforms.weibo |    [12] Saved: 5241678237270455
+2025-12-11 15:23:36 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241241854018379 Time: 2025-12-07 15:34:58
+2025-12-11 15:23:36 | INFO | tools.capture_engine.platforms.weibo |    [13] Saved: 5241241854018379
+2025-12-11 15:23:36 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5241241854018379&mid=5241241854018379 "HTTP/1.1 200 OK"
+2025-12-11 15:23:36 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241241854018379 Time: 2025-12-07 15:34:58
+2025-12-11 15:23:36 | INFO | tools.capture_engine.platforms.weibo |    [14] Saved: 5241241854018379
+2025-12-11 15:23:36 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242301855305147 Time: 2025-12-10 13:47:02
+2025-12-11 15:23:36 | INFO | tools.capture_engine.platforms.weibo |    [15] Saved: 5242301855305147
+2025-12-11 15:23:36 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242301855305147&mid=5242301855305147 "HTTP/1.1 200 OK"
+2025-12-11 15:23:36 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242301855305147 Time: 2025-12-10 13:47:02
+2025-12-11 15:23:36 | INFO | tools.capture_engine.platforms.weibo |    [16] Saved: 5242301855305147
+2025-12-11 15:23:36 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/0087FFy1ly1i84uf17my7j30wr0b2dho.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:23:37 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242016725467599 Time: 2025-12-09 18:54:01
+2025-12-11 15:23:37 | INFO | tools.capture_engine.platforms.weibo |    [17] Saved: 5242016725467599
+2025-12-11 15:23:37 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242016725467599&mid=5242016725467599 "HTTP/1.1 200 OK"
+2025-12-11 15:23:37 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/0087FFy1ly1i84uf17my7j30wr0b2dho.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:23:38 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242016725467599 Time: 2025-12-09 18:54:01
+2025-12-11 15:23:38 | INFO | tools.capture_engine.platforms.weibo |    [18] Saved: 5242016725467599
+2025-12-11 15:23:38 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242306777317615 Time: 2025-12-10 14:06:35
+2025-12-11 15:23:38 | INFO | tools.capture_engine.platforms.weibo |    [19] Saved: 5242306777317615
+2025-12-11 15:23:38 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242306777317615&mid=5242306777317615 "HTTP/1.1 200 OK"
+2025-12-11 15:23:38 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242306777317615 Time: 2025-12-10 14:06:35
+2025-12-11 15:23:38 | INFO | tools.capture_engine.platforms.weibo |    [20] Saved: 5242306777317615
+2025-12-11 15:23:39 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%A4%A7%E9%99%86&page_type=searchall&page=2 "HTTP/1.1 200 OK"
+2025-12-11 15:23:39 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%A4%A7%E9%99%86&page_type=searchall&page=3 "HTTP/1.1 200 OK"
+2025-12-11 15:23:39 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%A4%A7%E9%99%86&page_type=searchall&page=4 "HTTP/1.1 200 OK"
+2025-12-11 15:23:47 | INFO | tools.capture_engine.platforms.xinhua |    [1] Saved: 极端天气四问...
+2025-12-11 15:23:53 | INFO | tools.capture_engine.platforms.xinhua |    [2] Saved: 特朗普继续数落欧洲 ...
+2025-12-11 15:23:57 | INFO | tools.capture_engine.platforms.xinhua |    [3] Saved: 国台办评台当局封禁小...
+2025-12-11 15:23:57 | INFO | tools.capture_engine.platforms.toutiao | [Toutiao] Cookies loaded.
+2025-12-11 15:23:59 | INFO | tools.capture_engine.platforms.toutiao | [Toutiao] Searching: 大陆
+2025-12-11 15:24:04 | INFO | tools.capture_engine.platforms.xinhua |    [4] Saved: 赖清德妄称乐意帮助解...
+2025-12-11 15:24:09 | INFO | tools.capture_engine.platforms.xinhua |    [5] Saved: 赖清德妄称乐意帮助解...
+2025-12-11 15:24:11 | INFO | tools.capture_engine.platforms.cctv |    [1] Saved: 民进党当局封禁小红书...
+2025-12-11 15:24:12 | INFO | tools.capture_engine.platforms.toutiao |    [1] Saved: 大陆在东亚海域部署百...
+2025-12-11 15:24:14 | INFO | tools.capture_engine.platforms.xinhua |    [6] Saved: 国台办：赖清德当局是...
+2025-12-11 15:24:20 | INFO | tools.capture_engine.platforms.xinhua |    [7] Saved: 国台办回应台当局封禁...
+2025-12-11 15:24:24 | INFO | tools.capture_engine.platforms.toutiao |    [2] Saved: 美国学者声称台湾面临...
+2025-12-11 15:24:26 | INFO | tools.capture_engine.platforms.xinhua |    [8] Saved: 特写：一根“电力线”...
+2025-12-11 15:24:31 | INFO | tools.capture_engine.platforms.xinhua |    [9] Saved: 多元化、公交化：中欧...
+2025-12-11 15:24:31 | INFO | tools.capture_engine.api | [CaptureEngine] Manual STOP signal received for 1995405712146067458
+2025-12-11 15:24:33 | INFO | tools.capture_engine.api | [CaptureEngine] Manual STOP detected for 1995405712146067458.
+2025-12-11 15:24:34 | INFO | tools.capture_engine.platforms.cctv |    [2] Saved: 全球仅存约6500只...
+2025-12-11 15:24:35 | INFO | tools.capture_engine.platforms.toutiao |    [3] Saved: 赖清德妄称帮大陆“解...
+2025-12-11 15:24:38 | INFO | tools.capture_engine.platforms.toutiao |    [4] Saved: 发出毁灭警告?日本智...
+2025-12-11 15:24:40 | INFO | tools.capture_engine.platforms.toutiao |    [5] Saved: 萧美琴向大陆喊话后，...
+2025-12-11 15:24:42 | INFO | tools.capture_engine.platforms.toutiao |    [6] Saved: 赖清德称“台湾是主权...
+2025-12-11 15:24:44 | INFO | tools.capture_engine.platforms.toutiao |    [7] Saved: 美方提醒台当局:大陆...
+2025-12-11 15:24:47 | INFO | tools.capture_engine.platforms.toutiao |    [8] Saved: 萧美琴喊话大陆，话音...
+2025-12-11 15:24:49 | INFO | tools.capture_engine.platforms.toutiao |    [9] Saved: 走绝路了!台当局:台...
+2025-12-11 15:25:03 | WARNING | tools.capture_engine.api | [CaptureEngine] Some crawlers did not exit in time, forcing cancel.
+2025-12-11 15:25:03 | INFO | tools.capture_engine.api | [CaptureEngine] Task 1995405712146067458 lifecycle ended. Status: stop
+2025-12-11 15:33:25 | INFO | tools.capture_engine.platforms.toutiao | [Toutiao] Finished 大陆: 9
+2025-12-11 15:43:03 | INFO | tools.capture_engine.api | [CaptureEngine] Task Initialized: 1999022100437995522
+2025-12-11 15:43:03 | INFO | tools.capture_engine.api | [CaptureEngine] Scheduler started for 1999022100437995522
+2025-12-11 15:43:03 | INFO | tools.capture_engine.platforms.weibo | [Weibo] Task started. TaskID=1999022100437995522
+2025-12-11 15:43:03 | INFO | tools.capture_engine.platforms.weibo | [Weibo] Searching: 哈哈哈哈
+2025-12-11 15:43:03 | INFO | tools.capture_engine.platforms.toutiao | [Toutiao] Task started. TaskID=1999022100437995522
+2025-12-11 15:43:03 | INFO | tools.capture_engine.platforms.cctv | [CCTV] Task started. TaskID=1999022100437995522
+2025-12-11 15:43:03 | INFO | tools.capture_engine.platforms.xinhua | [Xinhua] Task started. TaskID=1999022100437995522
+2025-12-11 15:43:03 | INFO | tools.capture_engine.platforms.cnn | [CNN] Task started. TaskID=1999022100437995522
+2025-12-11 15:43:04 | INFO | tools.capture_engine.platforms.cctv | [CCTV] Searching: 哈哈哈哈
+2025-12-11 15:43:04 | INFO | tools.capture_engine.platforms.cnn | [CNN] Searching: 哈哈哈哈
+2025-12-11 15:43:04 | INFO | tools.capture_engine.platforms.xinhua | [Xinhua] Searching: 哈哈哈哈
+2025-12-11 15:43:05 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%93%88%E5%93%88%E5%93%88%E5%93%88&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-11 15:43:05 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/007YQRajgy1i7ype6bfnuj30u01t0b29.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:07 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5240093057223202 Time: 2025-12-04 11:30:04
+2025-12-11 15:43:07 | INFO | tools.capture_engine.platforms.weibo |    [1] Saved: 5240093057223202
+2025-12-11 15:43:08 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5240093057223202&mid=5240093057223202 "HTTP/1.1 200 OK"
+2025-12-11 15:43:08 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/007YQRajgy1i7ype6bfnuj30u01t0b29.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:10 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5240093057223202 Time: 2025-12-04 11:30:04
+2025-12-11 15:43:10 | INFO | tools.capture_engine.platforms.weibo |    [2] Saved: 5240093057223202
+2025-12-11 15:43:10 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5240893479060660 Time: 2025-12-06 16:30:39
+2025-12-11 15:43:10 | INFO | tools.capture_engine.platforms.weibo |    [3] Saved: 5240893479060660
+2025-12-11 15:43:10 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5240893479060660&mid=5240893479060660 "HTTP/1.1 200 OK"
+2025-12-11 15:43:10 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5240893479060660 Time: 2025-12-06 16:30:39
+2025-12-11 15:43:10 | INFO | tools.capture_engine.platforms.weibo |    [4] Saved: 5240893479060660
+2025-12-11 15:43:11 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/005IxC1tly1i86s1qfhhjj30wr17pgzw.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:11 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/005IxC1tly1i86s1rwiydj30wr0w1gu3.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:12 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/005IxC1tly1i86s1sazyqj30wr0lrwk6.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:12 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/005IxC1tly1i86s1pkfd7g30js0b4e81.gif "HTTP/1.1 200 OK"
+2025-12-11 15:43:15 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/005IxC1tly1i86s1stqv8j31400u0wk2.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:16 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/005IxC1tly1i86trf0fzej30wr0oj0x2.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:16 | INFO | tools.capture_engine.platforms.xinhua |    [1] Saved: 市场监管总局发布七起...
+2025-12-11 15:43:17 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242638304281419 Time: 2025-12-11 12:03:58
+2025-12-11 15:43:17 | INFO | tools.capture_engine.platforms.weibo |    [5] Saved: 5242638304281419
+2025-12-11 15:43:17 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242638304281419&mid=5242638304281419 "HTTP/1.1 200 OK"
+2025-12-11 15:43:18 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/005IxC1tly1i86s1qfhhjj30wr17pgzw.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:19 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/005IxC1tly1i86s1rwiydj30wr0w1gu3.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:21 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/005IxC1tly1i86s1sazyqj30wr0lrwk6.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:21 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/005IxC1tly1i86s1pkfd7g30js0b4e81.gif "HTTP/1.1 200 OK"
+2025-12-11 15:43:24 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/005IxC1tly1i86s1stqv8j31400u0wk2.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:24 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/005IxC1tly1i86trf0fzej30wr0oj0x2.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:25 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242638304281419 Time: 2025-12-11 12:03:58
+2025-12-11 15:43:25 | INFO | tools.capture_engine.platforms.weibo |    [6] Saved: 5242638304281419
+2025-12-11 15:43:25 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242644998654306 Time: 2025-12-11 12:30:34
+2025-12-11 15:43:25 | INFO | tools.capture_engine.platforms.weibo |    [7] Saved: 5242644998654306
+2025-12-11 15:43:25 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242644998654306&mid=5242644998654306 "HTTP/1.1 200 OK"
+2025-12-11 15:43:25 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242644998654306 Time: 2025-12-11 12:30:34
+2025-12-11 15:43:26 | INFO | tools.capture_engine.platforms.weibo |    [8] Saved: 5242644998654306
+2025-12-11 15:43:26 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241893354995921 Time: 2025-12-09 10:43:47
+2025-12-11 15:43:26 | INFO | tools.capture_engine.platforms.weibo |    [9] Saved: 5241893354995921
+2025-12-11 15:43:26 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5241893354995921&mid=5241893354995921 "HTTP/1.1 200 OK"
+2025-12-11 15:43:26 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241893354995921 Time: 2025-12-09 10:43:47
+2025-12-11 15:43:26 | INFO | tools.capture_engine.platforms.weibo |    [10] Saved: 5241893354995921
+2025-12-11 15:43:26 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242267591245987 Time: 2025-12-10 11:30:52
+2025-12-11 15:43:27 | INFO | tools.capture_engine.platforms.weibo |    [11] Saved: 5242267591245987
+2025-12-11 15:43:27 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242267591245987&mid=5242267591245987 "HTTP/1.1 200 OK"
+2025-12-11 15:43:27 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242267591245987 Time: 2025-12-10 11:30:52
+2025-12-11 15:43:27 | INFO | tools.capture_engine.platforms.weibo |    [12] Saved: 5242267591245987
+2025-12-11 15:43:27 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241292088936607 Time: 2025-12-07 18:54:35
+2025-12-11 15:43:27 | INFO | tools.capture_engine.platforms.weibo |    [13] Saved: 5241292088936607
+2025-12-11 15:43:27 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5241292088936607&mid=5241292088936607 "HTTP/1.1 200 OK"
+2025-12-11 15:43:27 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5241292088936607 Time: 2025-12-07 18:54:35
+2025-12-11 15:43:28 | INFO | tools.capture_engine.platforms.xinhua |    [2] Saved: 我在现场·照片背后的...
+2025-12-11 15:43:28 | INFO | tools.capture_engine.platforms.weibo |    [14] Saved: 5241292088936607
+2025-12-11 15:43:28 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242154123264581 Time: 2025-12-10 04:00:00
+2025-12-11 15:43:28 | INFO | tools.capture_engine.platforms.weibo |    [15] Saved: 5242154123264581
+2025-12-11 15:43:28 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242154123264581&mid=5242154123264581 "HTTP/1.1 200 OK"
+2025-12-11 15:43:28 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242154123264581 Time: 2025-12-10 04:00:00
+2025-12-11 15:43:28 | INFO | tools.capture_engine.platforms.weibo |    [16] Saved: 5242154123264581
+2025-12-11 15:43:28 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242592105336877 Time: 2025-12-11 09:00:23
+2025-12-11 15:43:28 | INFO | tools.capture_engine.platforms.weibo |    [17] Saved: 5242592105336877
+2025-12-11 15:43:29 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242592105336877&mid=5242592105336877 "HTTP/1.1 200 OK"
+2025-12-11 15:43:29 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5242592105336877 Time: 2025-12-11 09:00:23
+2025-12-11 15:43:29 | INFO | tools.capture_engine.platforms.weibo |    [18] Saved: 5242592105336877
+2025-12-11 15:43:29 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/964c90a5ly1i80av0nupsj2076070q39.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:29 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5240593334929658 Time: 2025-12-05 20:37:59
+2025-12-11 15:43:30 | INFO | tools.capture_engine.platforms.weibo |    [19] Saved: 5240593334929658
+2025-12-11 15:43:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5240593334929658&mid=5240593334929658 "HTTP/1.1 200 OK"
+2025-12-11 15:43:30 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/964c90a5ly1i80av0nupsj2076070q39.jpg "HTTP/1.1 200 OK"
+2025-12-11 15:43:30 | INFO | tools.capture_engine.platforms.toutiao | [Toutiao] Cookies loaded.
+2025-12-11 15:43:30 | INFO | data_collect.platforms.weibo.storage | [Weibo] Saved: 5240593334929658 Time: 2025-12-05 20:37:59
+2025-12-11 15:43:30 | INFO | tools.capture_engine.platforms.weibo |    [20] Saved: 5240593334929658
+2025-12-11 15:43:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%93%88%E5%93%88%E5%93%88%E5%93%88&page_type=searchall&page=2 "HTTP/1.1 200 OK"
+2025-12-11 15:43:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%93%88%E5%93%88%E5%93%88%E5%93%88&page_type=searchall&page=3 "HTTP/1.1 200 OK"
+2025-12-11 15:43:31 | INFO | tools.capture_engine.platforms.toutiao | [Toutiao] Searching: 哈哈哈哈
+2025-12-11 15:43:32 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E5%93%88%E5%93%88%E5%93%88%E5%93%88&page_type=searchall&page=4 "HTTP/1.1 200 OK"
+2025-12-11 15:43:40 | INFO | tools.capture_engine.platforms.xinhua |    [3] Saved: 新春走基层|厦门部分...
+2025-12-11 15:43:47 | INFO | tools.capture_engine.platforms.toutiao |    [1] Saved: 哈哈哈哈
+18小时前...
+2025-12-11 15:43:49 | INFO | tools.capture_engine.platforms.toutiao |    [2] Saved: 嘿嘿嘿嘿[呲牙][大...
+2025-12-11 15:43:49 | INFO | tools.capture_engine.platforms.xinhua |    [4] Saved: 《大学生国潮文体生活...
+2025-12-11 15:43:57 | INFO | tools.capture_engine.platforms.cctv |    [1] Saved: 亚冬会｜闲记：“尔滨...
+2025-12-11 15:44:00 | INFO | tools.capture_engine.platforms.toutiao |    [3] Saved: #大六座旗舰看岚图泰...
+2025-12-11 15:44:01 | INFO | tools.capture_engine.platforms.xinhua |    [5] Saved: 爱奇艺2025年Q1...
+2025-12-11 15:44:02 | INFO | tools.capture_engine.platforms.toutiao |    [4] Saved: 哈哈哈哈[大笑][大...
+2025-12-11 15:44:07 | INFO | tools.capture_engine.platforms.xinhua |    [6] Saved: 爱奇艺星钻VIP会员...
+2025-12-11 15:44:14 | INFO | tools.capture_engine.platforms.toutiao |    [5] Saved: 哈哈哈哈哈哈哈哈...
+2025-12-11 15:44:16 | INFO | tools.capture_engine.platforms.toutiao |    [6] Saved: 哈哈哈哈笑死我了...
+2025-12-11 15:44:17 | INFO | tools.capture_engine.platforms.xinhua |    [7] Saved: 爱奇艺2025年Q1...
+2025-12-11 15:44:23 | INFO | tools.capture_engine.platforms.xinhua |    [8] Saved: 在昌江，“向往的生活...
+2025-12-11 15:44:27 | INFO | tools.capture_engine.platforms.toutiao |    [7] Saved: 哈哈哈哈哈哈哈哈...
+2025-12-11 15:44:31 | INFO | tools.capture_engine.platforms.cctv |    [2] Saved: 心情也容易“过冬” ...
+2025-12-11 15:44:31 | INFO | tools.capture_engine.platforms.xinhua |    [9] Saved: 《哈哈哈哈哈5》“蘑...
+2025-12-11 15:44:37 | INFO | tools.capture_engine.platforms.xinhua |    [10] Saved: 综艺种草 文旅生花—...
+2025-12-11 15:44:39 | INFO | tools.capture_engine.platforms.toutiao |    [8] Saved: 哈哈哈哈哈哈哈哈...
+2025-12-11 15:44:42 | INFO | tools.capture_engine.platforms.xinhua |    [11] Saved: 市场监管总局发布七起...
+2025-12-11 15:44:50 | INFO | tools.capture_engine.platforms.toutiao |    [9] Saved: 哈哈哈哈哈哈哈哈...
+2025-12-11 15:44:50 | INFO | tools.capture_engine.platforms.xinhua |    [12] Saved: 我在现场·照片背后的...
+2025-12-11 15:45:00 | INFO | tools.capture_engine.platforms.xinhua |    [13] Saved: 《哈哈哈哈哈》第五季...
+2025-12-11 15:45:02 | INFO | tools.capture_engine.platforms.toutiao |    [10] Saved: 哈哈哈哈哈哈哈哈...
+2025-12-11 15:45:05 | INFO | tools.capture_engine.platforms.cctv |    [3] Saved: 拥抱乌克兰难民？美国...
+2025-12-11 15:45:12 | INFO | tools.capture_engine.platforms.xinhua |    [14] Saved: 《你好，12315》...
+2025-12-11 15:45:21 | INFO | tools.capture_engine.platforms.xinhua |    [15] Saved: 亚冬会｜闲记：“尔滨...
+2025-12-11 15:45:28 | INFO | tools.capture_engine.platforms.xinhua |    [16] Saved: 贾玲“变形记”：我的...
+2025-12-11 15:45:35 | INFO | tools.capture_engine.platforms.xinhua |    [17] Saved: 市场监管总局发布七起...
+2025-12-11 15:45:45 | INFO | tools.capture_engine.platforms.cctv |    [4] Saved: 微光汇聚抗洪希望，娃...
+2025-12-11 15:45:52 | INFO | tools.capture_engine.platforms.xinhua |    [18] Saved: 《大山的小孩》入选“...
+2025-12-11 15:46:02 | INFO | tools.capture_engine.platforms.xinhua |    [19] Saved: 海澜之家携手吴镇宇共...
+2025-12-11 15:46:11 | INFO | tools.capture_engine.platforms.xinhua |    [20] Saved: 《哈哈哈哈哈第五季》...
+2025-12-11 15:46:52 | INFO | tools.capture_engine.platforms.cctv |    [5] Saved: 上海迎来一位会“笑”...
+2025-12-11 15:47:33 | INFO | tools.capture_engine.platforms.cctv |    [6] Saved: 娃哈哈集团创始人宗庆...
+2025-12-11 15:54:31 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-11 15:54:31 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-11 15:54:38 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-11 15:54:39 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 15:54:49 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-11 15:55:07 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-11 15:55:07 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-11 15:55:07 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-11 15:55:07 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-11 15:55:07 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-11 15:55:08 | DEBUG | jieba | Loading model cost 0.692 seconds.
+2025-12-11 15:55:08 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-11 15:55:08 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-11 15:55:08 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-11 15:55:16 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
+2025-12-11 15:55:16 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-11 15:55:22 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成

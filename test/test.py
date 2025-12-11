@@ -1,9 +1,9 @@
+# 文件路径: open_source_data/kg_completion/fetch_test_json.py
 import json
 import random
 from nebula3.gclient.net import ConnectionPool
 from nebula3.Config import Config
 
-# === 配置信息 ===
 NEBULA_IP = "39.104.200.88"
 NEBULA_PORT = 41003
 USER = "root"
@@ -12,7 +12,7 @@ SPACE_NAME = "event_target1"
 
 
 def fetch_and_generate_json():
-    # 1. 连接数据库
+    print(">>> 正在连接 NebulaGraph...")
     config = Config()
     config.max_connection_pool_size = 5
     pool = ConnectionPool()
@@ -23,17 +23,14 @@ def fetch_and_generate_json():
     session = pool.get_session(USER, PASSWORD)
     session.execute(f'USE {SPACE_NAME}')
 
-    # 2. 随机采样查询
-    # 获取 15 条有关系的边，并尝试获取 name 或 event_name 属性
-    print("正在从数据库采样数据...")
-
-    # 这里的查询尝试获取边的类型，以及起止点的名称
-    # 如果点是事件，通常有 event_name；如果是人/组织，通常有 name
+    print(">>> 正在随机采样数据 (获取 properties(e).relation)...")
+    # === 核心修正：查询 relation 属性 ===
     gql = """
     MATCH (h)-[e]->(t)
     RETURN 
         id(h) as h_id, properties(h).name as h_name, properties(h).event_name as h_evt_name,
-        type(e) as r_type,
+        properties(e).relation as rel_prop,
+        type(e) as rel_type,
         id(t) as t_id, properties(t).name as t_name, properties(t).event_name as t_evt_name
     LIMIT 15;
     """
@@ -44,44 +41,40 @@ def fetch_and_generate_json():
         return
 
     graph_data = []
-
-    # 3. 处理结果
     size = result.row_size()
     for i in range(size):
         row = result.row_values(i)
 
-        # 获取 ID
         h_val = row[0].as_string()
-        t_val = row[4].as_string()
-        r_val = row[3].as_string()  # 关系名
 
-        # 尝试获取更友好的名称 (优先用 name/event_name，没有就用 ID)
-        # Nebula 返回的是 Value 对象，需要判断是否为空
-        h_name_prop = row[1].as_string() if not row[1].is_null() else ""
-        h_evt_prop = row[2].as_string() if not row[2].is_null() else ""
+        # 优先取 relation 属性
+        r_prop = row[3].as_string() if not row[3].is_null() else None
+        r_type = row[4].as_string()
+        final_r = r_prop if r_prop else r_type
 
-        t_name_prop = row[5].as_string() if not row[5].is_null() else ""
-        t_evt_prop = row[6].as_string() if not row[6].is_null() else ""
+        t_val = row[5].as_string()
 
-        # 决定 h 的显示名称
-        final_h = h_name_prop if h_name_prop else (h_evt_prop if h_evt_prop else h_val)
-        # 决定 t 的显示名称
-        final_t = t_name_prop if t_name_prop else (t_evt_prop if t_evt_prop else t_val)
+        # 提取名称
+        h_name = row[1].as_string() if not row[1].is_null() else ""
+        h_evt = row[2].as_string() if not row[2].is_null() else ""
+        h_label = h_name or h_evt or h_val
 
-        # 构造三元组
+        t_name = row[6].as_string() if not row[6].is_null() else ""
+        t_evt = row[7].as_string() if not row[7].is_null() else ""
+        t_label = t_name or t_evt or t_val
+
         graph_data.append({
-            "h": final_h,
-            "r": r_val,  # 这里保持数据库原本的英文关系名，或者你可以手动映射
-            "t": final_t
+            "h": h_label,
+            "r": final_r,  # 这里现在是细粒度关系了
+            "t": t_label
         })
 
-    # 4. 构造最终请求体
     payload = {
         "graph": graph_data,
         "params": {
             "which": "all",
             "query_space": "observed",
-            "conf": 0.2,  # 融合分数阈值
+            "conf": 0.2,
             "topk_recall": 120,
             "topm_rerank": 20,
             "top_degree_k": 0,

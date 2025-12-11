@@ -15,6 +15,14 @@ from semantic.api import router as semantic_router
 # 引入 pipeline 实例用于启动时自动运行
 from semantic.pipeline import pipeline_instance
 
+# 【新增】引入 KG Completion 模块
+from kg_completion.api_server import router as kg_router, init_kg_service, stop_kg_service
+
+# ================= 新增: 引入 KGE 模块 =================
+from kg_correction.kge import router as kg_correction_router
+from kg_correction.kge import corrector
+# ======================================================
+
 
 # 使用 lifespan 替代 on_event
 @asynccontextmanager
@@ -22,12 +30,24 @@ async def lifespan(app: FastAPI):
     # 1. 工具预热
     asyncio.create_task(warmup_all_tools())
 
-    # 2. 【可选】自动启动语义处理监控 (如果不希望自动启动，可注释掉下面这一行)
-    asyncio.create_task(pipeline_instance.run_loop(interval=60))
+    # 2. 【可选】自动启动语义处理监控
+    # asyncio.create_task(pipeline_instance.run_loop(interval=60))
+
+    # 3. 【新增】KG 服务初始化 (加载大模型和图谱向量)
+    # 注意：这会加载模型，可能需要一些时间
+    await init_kg_service()
+
+    # 2. 【新增】加载知识图谱纠错大模型
+    # 注意：加载 8B 模型需要显存，如果显存紧张建议检查 kge.py 中的加载配置
+    corrector.load_model()
 
     yield
-    # 3. 关闭时的清理工作 (如有)
+
+    # 4. 关闭时的清理工作
     pipeline_instance.stop()
+
+    # 5. 【新增】KG 服务清理
+    stop_kg_service()
 
 
 app = FastAPI(
@@ -49,6 +69,12 @@ app.add_middleware(
 app.include_router(collect_router, prefix="/collect", tags=["数据采集"])
 app.include_router(tools_router, prefix="/tools")
 app.include_router(semantic_router, prefix="/semantic", tags=["语义处理"])
+# 【新增】注册 KG 路由
+app.include_router(kg_router, prefix="/kgc", tags=["知识图谱补全"])
+
+# ================= 新增: 注册 KGE 路由 =================
+app.include_router(kg_correction_router, prefix="/kge", tags=["知识图谱纠错"])
+# ======================================================
 
 
 @app.get("/")
@@ -56,11 +82,9 @@ def health_check():
     return {
         "status": "ok",
         "project": settings.PROJECT_NAME,
-        "modules": ["collection", "tools", "semantic"]
+        "modules": ["collection", "tools", "semantic", "kg_completion"]
     }
 
-
-# 旧的 on_event 方式已移除
 
 if __name__ == "__main__":
     uvicorn.run(

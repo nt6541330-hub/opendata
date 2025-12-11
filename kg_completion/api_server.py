@@ -1,27 +1,29 @@
+# open_source_data/kg_completion/api_server.py
 import os
 import json
 import torch
 import numpy as np
-import uvicorn
 import time
 import re
 from typing import List, Optional, Any, Dict
-from contextlib import asynccontextmanager
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 from nebula3.gclient.net import ConnectionPool
 from nebula3.Config import Config
 
-# 导入配置
-from kg_config import (
+# 修改为相对导入，确保在 main.py 作为模块启动时能找到配置
+from .kg_config import (
     TRANSE_VECTORS_PATH,
     LLM_BASE_MODEL_PATH,
     LORA_OUTPUT_DIR,
     LLM_DIR,
     NEBULA_CONFIG
 )
+
+# 创建 Router
+router = APIRouter()
 
 # ================= 关系映射表 =================
 RELATION_ALIAS = {
@@ -191,11 +193,11 @@ class ModelContainer:
 models = ModelContainer()
 
 
-# ================= 启动生命周期 =================
+# ================= 启动生命周期 (重构为函数供外部调用) =================
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    print(">>> [API] 服务初始化...")
+async def init_kg_service():
+    """初始化 KG 服务：连接数据库、加载模型"""
+    print(">>> [KG Module] 服务初始化...")
 
     # 1. 连接 NebulaGraph (用于实时名称解析)
     try:
@@ -216,13 +218,16 @@ async def lifespan(app: FastAPI):
     # 3. 加载 TransE
     if os.path.exists(TRANSE_VECTORS_PATH):
         print("    Loading TransE vectors...")
-        with open(TRANSE_VECTORS_PATH, 'r') as f:
-            data = json.load(f)
-        models.ent2id = data['entity2id']
-        models.rel2id = data['relation2id']
-        models.id2ent = {int(v): k for k, v in models.ent2id.items()}
-        models.ent_emb = np.array(data['ent_embeddings'])
-        models.rel_emb = np.array(data['rel_embeddings'])
+        try:
+            with open(TRANSE_VECTORS_PATH, 'r') as f:
+                data = json.load(f)
+            models.ent2id = data['entity2id']
+            models.rel2id = data['relation2id']
+            models.id2ent = {int(v): k for k, v in models.ent2id.items()}
+            models.ent_emb = np.array(data['ent_embeddings'])
+            models.rel_emb = np.array(data['rel_embeddings'])
+        except Exception as e:
+            print(f"    [Error] TransE 数据加载异常: {e}")
     else:
         print("    [Error] TransE 向量文件缺失！")
 
@@ -238,17 +243,18 @@ async def lifespan(app: FastAPI):
         )
         models.model = PeftModel.from_pretrained(base_model, LORA_OUTPUT_DIR)
         models.model.eval()
+        print("    LLM 加载成功")
     except Exception as e:
         print(f"    [Error] LLM 加载失败: {e}")
 
-    print(">>> [API] 服务启动成功")
-    yield
-    print(">>> [API] 服务已停止")
+    print(">>> [KG Module] 初始化完成")
+
+
+def stop_kg_service():
+    """停止 KG 服务：关闭连接"""
+    print(">>> [KG Module] 服务停止")
     if models.nebula_pool:
         models.nebula_pool.close()
-
-
-app = FastAPI(title="KGC Pro API", lifespan=lifespan)
 
 
 # ================= 核心逻辑 =================
@@ -282,7 +288,7 @@ def transe_predict(h_id, r_id, mode='tail', top_k=50):
 
 # ================= 接口实现 =================
 
-@app.post("/reason/graph", response_model=CompletionResponse)
+@router.post("/reason/graph", response_model=CompletionResponse)
 async def reason_graph(request: CompletionRequest):
     start_time = time.time()
     params = request.params
@@ -379,7 +385,7 @@ async def reason_graph(request: CompletionRequest):
         "budget_seconds": time.time() - start_time,
         "queries_run": len(tasks),
         "suggestions_kept": len(suggestions),
-        "debug_stats": {  # 为了兼容你的格式，保留这些字段
+        "debug_stats": {
             "empty_rank": 0,
             "below_conf": 1547,
             "exists": 19,
@@ -387,7 +393,3 @@ async def reason_graph(request: CompletionRequest):
     }
 
     return CompletionResponse(meta=meta_info, suggestions=suggestions)
-
-
-if __name__ == "__main__":
-    uvicorn.run("api_server:app", host="0.0.0.0", port=8803, reload=False)
