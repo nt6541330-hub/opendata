@@ -591,7 +591,8 @@ def extract_event_nodes_from_edges(db):
             "event_first_level": first_level,
             "event_second_level": second_level,
             "event_id": event_id_to_find,
-            "event_name": event_data.get("event_name", "")
+            "event_name": event_data.get("event_name", ""),
+            "status": "0"
         }
 
         # 展平各个子字段

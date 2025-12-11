@@ -1,9 +1,10 @@
+# semantic/pipeline.py
 import json
 import re
 import time
 import asyncio
 import traceback
-from pymongo import MongoClient, UpdateOne
+from pymongo import MongoClient
 from bson import ObjectId
 
 # === 导入配置 ===
@@ -19,7 +20,6 @@ from semantic.Into_mongodb import mogongdb
 from semantic.Time_Standard import event_time
 from semantic.Abstract import abstract
 from semantic.Images import images
-# 导入 Nebula 导入模块
 from semantic.Into_nebula import nebula_import
 
 logger = get_logger(__name__)
@@ -42,9 +42,21 @@ class SemanticPipeline:
         self.running = False  # 控制循环标志
         self.last_run_time = time.time()  # 上次运行时间
 
-        # === 触发阈值配置 (优先从 settings 读取，否则使用默认值) ===
-        self.TRIGGER_COUNT = getattr(settings, 'TRIGGER_DOC_COUNT', 50)  # 积攒多少条触发
-        self.TRIGGER_WAIT = getattr(settings, 'TRIGGER_MAX_WAIT_SECONDS', 1800)  # 最长等待秒数 (30分钟)
+        # === 【核心修改】热点触发阈值控制 ===
+        self.hotspot_accumulated_count = 0  # 计数器：记录自上次热点更新后，又新来了多少条数据
+
+        # 【阈值设定】当新数据累计超过多少条时，触发全量热点更新？
+
+        # 1. [新增] 热点触发阈值 (从 settings 获取，默认 500)
+        self.HOTSPOT_TRIGGER_THRESHOLD = getattr(settings, 'HOTSPOT_TRIGGER_THRESHOLD', 500)
+
+        # 2. 初始化计数器
+        # 【技巧】初始值设为阈值，确保系统刚启动时的第一批数据能直接触发一次热点更新
+        self.hotspot_accumulated_count = self.HOTSPOT_TRIGGER_THRESHOLD
+
+        # === 触发机制配置 ===
+        self.TRIGGER_COUNT = getattr(settings, 'TRIGGER_DOC_COUNT', 50)  # 积攒多少条触发处理流程
+        self.TRIGGER_WAIT = getattr(settings, 'TRIGGER_MAX_WAIT_SECONDS', 1800)  # 最长等待秒数
 
     def get_max_event_ids(self):
         """获取各类型事件的最大编号（从 extract_element_event 集合统计）"""
@@ -139,13 +151,8 @@ class SemanticPipeline:
         except:
             return ObjectId()
 
-    # --- 核心逻辑优化：触发检查 ---
     def check_trigger_condition(self):
-        """
-        检查是否满足触发条件：
-        1. 积压总数 >= TRIGGER_COUNT
-        2. 等待时间 >= TRIGGER_WAIT 且有数据
-        """
+        """检查是否满足处理触发条件"""
         total_new = 0
         for col_name in settings.COL_SRC_LIST:
             # 统计 status='0' (未处理)
@@ -165,15 +172,13 @@ class SemanticPipeline:
 
         return should_run, reason, total_new
 
-    # --- 核心执行逻辑 ---
     def run_once(self, force=False):
-        """执行一次完整的 Pipeline (支持积攒触发 + 增量处理)"""
+        """执行一次完整的 Pipeline"""
 
         # 1. 检查触发条件
         if not force:
             should_run, reason, total_new = self.check_trigger_condition()
             if not should_run:
-                # logger.debug(f"[Semantic] 未满足触发条件 (积压: {total_new})")
                 return f"Skipped: Not enough data ({total_new})"
             logger.info(f"🚀 [Semantic] 触发执行: {reason}")
         else:
@@ -181,15 +186,12 @@ class SemanticPipeline:
 
         self.last_run_time = time.time()
 
-        # 2. 数据搬运：源集合(status=0) -> Interim，并标记源 status=1
-        self.interim_col.delete_many({})  # 清空 interim，准备接收本批次增量
-
-        moved_ids_map = {}  # {col_name: [ids...]}
+        # 2. 数据搬运：源集合(status=0) -> Interim
+        self.interim_col.delete_many({})  # 清空 interim
+        moved_ids_map = {}
         total_moved = 0
 
         for col_name in settings.COL_SRC_LIST:
-            # 获取该集合的一批新数据
-            # 限制一次处理量，防止单次过多
             batch_limit = getattr(settings, 'SEMANTIC_BATCH_SIZE', 200)
             docs = list(self.col_src_dict[col_name].find({"status": "0"}).limit(batch_limit))
 
@@ -202,7 +204,7 @@ class SemanticPipeline:
         if total_moved == 0 and not force:
             return "No new data moved"
 
-        # 3. 标记源数据为 "1" (处理中/已处理)，防止重复搬运
+        # 3. 标记源数据为 "1" (处理中)
         for col_name, ids in moved_ids_map.items():
             if ids:
                 self.col_src_dict[col_name].update_many(
@@ -212,24 +214,37 @@ class SemanticPipeline:
 
         logger.info(f"📥 [Semantic] 本次增量处理数据: {total_moved} 条")
 
+        # === 【核心逻辑】累积计数更新 ===
+        self.hotspot_accumulated_count += total_moved
+        logger.info(f"📊 [Hotspot] 当前新数据累积池: {self.hotspot_accumulated_count} / {self.HOTSPOT_TRIGGER_THRESHOLD}")
+
         try:
             # 4. 调用各个子模块
 
-            # [Step 1] 热点事件识别
-            # 优化：不只看 interim，而是扫描所有源集合的最近 N 天数据，保证热点连贯性
-            logger.info("🔥 [Step 1] 热点事件识别 (扫描全量源上下文)...")
-            # 传入源集合列表，hotspot 模块会去遍历这些集合
-            hotspot.run_on_collection(source_collections=settings.COL_SRC_LIST)
+            # === [Step 1] 热点事件识别 (基于累积数量触发) ===
+            # 逻辑：只有当累积的新数据超过阈值（如500条），或者强制执行时，才跑热点
+            if self.hotspot_accumulated_count >= self.HOTSPOT_TRIGGER_THRESHOLD or force:
+                logger.info(
+                    f"🔥 [Step 1] 累积新数据达到阈值 ({self.hotspot_accumulated_count} >= {self.HOTSPOT_TRIGGER_THRESHOLD})，执行全量热点更新...")
 
-            # [Step 2] 增量信息抽取 (仅针对 interim 中的新数据)
+                # 传入源集合列表，hotspot 模块会扫描全量数据进行生成
+                hotspot.run_on_collection(source_collections=settings.COL_SRC_LIST)
+
+                # 重置计数器
+                self.hotspot_accumulated_count = 0
+                logger.info("✅ [Step 1] 热点更新完成，计数器已重置")
+            else:
+                logger.info(f"⏳ [Step 1] 跳过热点更新 (等待更多新数据累积...)")
+
+            # === [Step 2] 增量信息抽取 (每次必跑，针对 interim) ===
             logger.info("🧠 [Step 2] 增量信息抽取...")
             event.run_on_collection(settings.COLL_INTERIM)
 
-            # [Step 3] 指代消解 (仅针对 interim)
+            # === [Step 3] 指代消解 ===
             logger.info("🔗 [Step 3] 指代消解...")
             Disambiguation.main(collection_name=settings.COLL_INTERIM)
 
-            # [Step 4] ID分配与分发 (将抽取结果入库)
+            # === [Step 4] ID分配与分发 ===
             logger.info("🆔 [Step 4] ID 分配与格式转换...")
             processed_docs = list(self.interim_col.find({}))
             max_ids = self.get_max_event_ids()
@@ -240,12 +255,10 @@ class SemanticPipeline:
 
             for item in processed_docs:
                 s_data = self.clean_structured_data(item.get("structured_data", {}))
-                # 过滤无时间事件
                 valid_events = [e for e in s_data.get("events", []) if self.has_valid_time(e)]
                 if not valid_events: continue
                 s_data["events"] = valid_events
 
-                # 构造原始结构数据
                 detail_docs.append({
                     "_id": self.to_object_id(item.get("_id")),
                     "source": item.get("source"),
@@ -253,10 +266,8 @@ class SemanticPipeline:
                     "event_second_level": item.get("predicted_subcategory"),
                     "structured_data": s_data
                 })
-                # 构造演化结构数据
                 evo_docs.append(conversion.convert_document_simple(item))
 
-            # 写入结果表
             if detail_docs:
                 for d in detail_docs:
                     self.detail_col.replace_one({"_id": d["_id"]}, d, upsert=True)
@@ -266,33 +277,32 @@ class SemanticPipeline:
 
             logger.info(f"💾 [Step 5] 数据入库完成 (Detail: {len(detail_docs)}, Evo: {len(evo_docs)})")
 
-            # [Step 6] 图谱构建 (从库中读取数据构建关联)
+            # === [Step 6] 图谱构建 ===
             logger.info("🕸️ [Step 6] 图谱构建 (Mogongdb)...")
             mogongdb.main()
 
-            # [Step 7] 时间标准化
+            # === [Step 7] 时间标准化 ===
             logger.info("⏱️ [Step 7] 时间标准化...")
-            # 迁移旧字段兼容
             self.db[settings.EVENT_NODE_COLLECTION].update_many(
                 {"time_position_period": {"$exists": True}},
                 [{"$set": {"time_position_moment": "$time_position_period", "time_position_period": "$$REMOVE"}}]
             )
             event_time.run_update(limit=0)
 
-            # [Step 8] 生成摘要
+            # === [Step 8] 生成摘要 ===
             logger.info("📝 [Step 8] 生成摘要...")
             abstract.main()
 
-            # [Step 9] 图片处理 (按需开启)
+            # === [Step 9] 图片处理 ===
             logger.info("🖼️ [Step 9] 图片处理...")
             # images.main()
 
-            # [Step 10] Nebula 入库
+            # === [Step 10] Nebula 入库 ===
             logger.info("🌌 [Step 10] Nebula 图谱导入...")
             nebula_import.main()
 
-            # [Step 11] 清理临时集合
-            logger.info("🧹 [Step 11] 清空临时集合 interim / toutiao_news_event ...")
+            # === [Step 11] 清理临时集合 ===
+            logger.info("🧹 [Step 11] 清空临时集合...")
             self.interim_col.drop()
             self.detail_col.drop()
 
@@ -301,7 +311,6 @@ class SemanticPipeline:
 
         except Exception as e:
             logger.error(f"❌ [Semantic] 处理流程异常: {e}\n{traceback.format_exc()}")
-            # 出错保留 status="1" 以便人工排查，或者可选择回滚为 "0"
             return f"Error: {str(e)}"
 
     async def run_loop(self, interval=10):
@@ -310,12 +319,10 @@ class SemanticPipeline:
         self.running = True
         while self.running:
             try:
-                # 在线程池中运行同步任务，避免阻塞
                 await asyncio.to_thread(self.run_once, force=False)
             except Exception as e:
                 logger.error(f"Loop Error: {e}")
 
-            # 等待间隔 (使用较短间隔以便及时响应强制触发或达到阈值)
             for _ in range(interval):
                 if not self.running: break
                 await asyncio.sleep(1)

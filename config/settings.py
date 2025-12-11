@@ -36,12 +36,27 @@ class Settings(BaseSettings):
     BUCKET_CNN: str = "fs_cnn"
     BUCKET_IMAGES: str = "fs_images"
 
-    # 触发机制
-    TRIGGER_DOC_COUNT = 50  # 积攒多少条新闻才触发处理
-    TRIGGER_MAX_WAIT_SECONDS = 1800  # 最长等待时间（秒），30分钟
+    # ========== 触发机制 (必须加类型注解) ==========
+    TRIGGER_DOC_COUNT: int = 50  # 积攒多少条新闻才触发处理
+    TRIGGER_MAX_WAIT_SECONDS: int = 1800  # 最长等待时间（秒）
+    SEMANTIC_BATCH_SIZE: int = 100  # 语义抽取批处理大小
 
-    # 热点聚类
-    HOTSPOT_DAYS_WINDOW = 20  # 热点聚类回顾过去几天的数据
+    # [新增] 热点更新累积阈值
+    HOTSPOT_TRIGGER_THRESHOLD: int = 200
+
+    # ========== 热点聚类配置 (必须加类型注解) ==========
+    HOTSPOT_DAYS_WINDOW: int = 30
+    HOTSPOT_BATCH_LIMIT: int = 5000
+    HOTSPOT_MIN_CLUSTER_SIZE: int = 4
+    HOTSPOT_OUT_DIR: str = "./reports_out"
+    HOTSPOT_ALPHA: float = 0.6
+    HOTSPOT_BETA: float = 0.3
+    HOTSPOT_GAMMA: float = 0.1
+    HOTSPOT_RECENCY_TAU_DAYS: int = 7
+    HOTSPOT_DISABLE_KEY_TARGETS: bool = True
+    HOTSPOT_DISABLE_EVOLUTION: bool = True
+    HOTSPOT_DISABLE_FORECAST: bool = True
+    HOTSPOT_MAX_TITLE_LEN: int = 20
 
     # ========== 爬虫/浏览器环境 ==========
     DRIVER_PATH: str = "/usr/local/bin/chromedriver"
@@ -50,7 +65,6 @@ class Settings(BaseSettings):
     TOUTIAO_COOKIE_FILE: str = os.path.join(BASE_DIR, "toutiao_cookies.json")
     STEALTH_JS_PATH: str = os.path.join(BASE_DIR, "stealth.min.js")
     CRAWL_LIMIT: int = 20
-    SEMANTIC_BATCH_SIZE: int = 100
 
     # ========== 模型相关配置 (Ollama) ==========
     OLLAMA_HOST: str = "http://127.0.0.1:11434"
@@ -78,18 +92,6 @@ class Settings(BaseSettings):
     # 热点 (Hotspot)
     HOTSPOT_OLLAMA_MODEL: str = "qwen3:32b"
     HOTSPOT_EMB_MODEL: str = "BAAI/bge-m3"
-    HOTSPOT_DAYS_WINDOW: int = 30
-    HOTSPOT_BATCH_LIMIT: int = 5000
-    HOTSPOT_MIN_CLUSTER_SIZE: int = 4
-    HOTSPOT_OUT_DIR: str = "./reports_out"
-    HOTSPOT_ALPHA: float = 0.6
-    HOTSPOT_BETA: float = 0.3
-    HOTSPOT_GAMMA: float = 0.1
-    HOTSPOT_RECENCY_TAU_DAYS: int = 7
-    HOTSPOT_DISABLE_KEY_TARGETS: bool = True
-    HOTSPOT_DISABLE_EVOLUTION: bool = True
-    HOTSPOT_DISABLE_FORECAST: bool = True
-    HOTSPOT_MAX_TITLE_LEN: int = 20
 
     # ========== 图片处理配置 (Images) ==========
     IMAGES_MODE: str = "convert"
@@ -99,19 +101,18 @@ class Settings(BaseSettings):
     IMAGES_LIMIT: int = 0
     IMAGES_NAME_FILTER: Optional[str] = None
 
-    # 在 Settings 类中添加：
+    # Google Map API
     GOOGLE_MAP_API_KEY: Optional[str] = "68956a5e9d3bb604493964kqo78745c"
-    # 您的地理编码服务地址
     GOOGLE_GEOCODE_URL: Optional[str] = "https://geocode.maps.co/search"
 
-    # ========== [新增] NebulaGraph 配置 ==========
+    # ========== NebulaGraph 配置 ==========
     NEBULA_IP: str = "39.104.200.88"
     NEBULA_PORT: int = 41003
     NEBULA_USER: str = "root"
     NEBULA_PASSWORD: str = "123456"
     NEBULA_SPACE_NAME: str = "event_target1"
 
-    # ========== 关系白名单与 Tag 字段配置 (合并自 relation_whitelist) ==========
+    # ========== 关系白名单与 Tag 字段配置 ==========
 
     # --- 1. 关系白名单 ---
     ALLOWED_EVENT_EVENT_RELATIONS: Set[str] = {

@@ -120,7 +120,7 @@ def grab_and_save(driver, keyword):
             "videos": videos,
             "crawl_time": datetime.now(),
             "keyword": keyword,
-            "status": 0
+            "status": "0"
         }
         coll.insert_one(doc)
         logger.info(f"已入库：{title[:30]}")

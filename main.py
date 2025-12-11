@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
     asyncio.create_task(warmup_all_tools())
 
     # 2. 【可选】自动启动语义处理监控 (如果不希望自动启动，可注释掉下面这一行)
-    # asyncio.create_task(pipeline_instance.run_loop(interval=60))
+    asyncio.create_task(pipeline_instance.run_loop(interval=60))
 
     yield
     # 3. 关闭时的清理工作 (如有)

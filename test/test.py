@@ -95,32 +95,32 @@ def main():
         client,
         SOURCE_DB_NAME,
         TARGET_DB_NAME,
-        "source_cctv",
-        "source_cctv",
+        "extract_element_event",
+        "extract_element_event",
         batch_size=BATCH_SIZE,
     )
 
-    # 3.2 GridFS 的 files 集合：fs_cctv.files
-    # 如果你确实用 GridFS 存 CCTV 图片，这两行要保留
-    # 如果图片其实是外部对象存储，只需要上面的 source_cctv 同步即可，把下面两段注释掉
-    copy_collection_append(
-        client,
-        SOURCE_DB_NAME,
-        TARGET_DB_NAME,
-        "fs_cctv.files",
-        "fs_cctv.files",
-        batch_size=BATCH_SIZE,
-    )
-
-    # 3.3 GridFS 的 chunks 集合：fs_cctv.chunks
-    copy_collection_append(
-        client,
-        SOURCE_DB_NAME,
-        TARGET_DB_NAME,
-        "fs_cctv.chunks",
-        "fs_cctv.chunks",
-        batch_size=BATCH_SIZE,
-    )
+    # # 3.2 GridFS 的 files 集合：fs_cctv.files
+    # # 如果你确实用 GridFS 存 CCTV 图片，这两行要保留
+    # # 如果图片其实是外部对象存储，只需要上面的 source_cctv 同步即可，把下面两段注释掉
+    # copy_collection_append(
+    #     client,
+    #     SOURCE_DB_NAME,
+    #     TARGET_DB_NAME,
+    #     "fs_xinhua.files",
+    #     "fs_xinhua.files",
+    #     batch_size=BATCH_SIZE,
+    # )
+    #
+    # # 3.3 GridFS 的 chunks 集合：fs_cctv.chunks
+    # copy_collection_append(
+    #     client,
+    #     SOURCE_DB_NAME,
+    #     TARGET_DB_NAME,
+    #     "fs_xinhua.chunks",
+    #     "fs_xinhua.chunks",
+    #     batch_size=BATCH_SIZE,
+    # )
 
     client.close()
 
