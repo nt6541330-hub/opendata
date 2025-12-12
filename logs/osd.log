@@ -673,3 +673,199 @@
 2025-12-12 16:09:34 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [4] Saved: 这里下雪啦！中秋邂逅...
 2025-12-12 16:10:02 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [5] Saved: 注意啦！河南一地4人...
 2025-12-12 16:13:21 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Finished 郑州下雪啦: 10
+2025-12-12 17:04:35 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+2025-12-12 17:04:59 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+2025-12-12 17:05:07 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+2025-12-12 17:05:21 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [1] Saved: 素说美丽眼膜深度评测...
+2025-12-12 17:05:23 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+2025-12-12 17:05:23 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [2] Saved: 眼纹的克星:素说美丽...
+2025-12-12 17:05:28 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [3] Saved: 素说美丽眼膜，让眼纹...
+2025-12-12 17:05:31 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [4] Saved: 眼膜哪个品牌好?深度...
+2025-12-12 17:05:33 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [5] Saved: 眼纹、眼袋不再怕，哪...
+2025-12-12 17:05:34 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+2025-12-12 17:05:35 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [6] Saved: 眼膜哪家强?素说美丽...
+2025-12-12 17:05:37 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [7] Saved: 眼纹、眼袋不再，素说...
+2025-12-12 17:05:40 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [8] Saved: 薛与薜的读音意义用法...
+2025-12-12 17:05:43 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [9] Saved: 【还在考虑怎么买?我...
+2025-12-12 17:05:46 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [10] Saved: 百果园门店车厘子JJ...
+2025-12-12 17:06:01 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+2025-12-12 17:07:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 17:07:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 17:07:30 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+2025-12-12 17:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+2025-12-12 17:08:41 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 17:08:41 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 17:08:41 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+2025-12-12 17:08:41 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+2025-12-12 17:10:04 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+2025-12-12 17:10:53 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Finished jjjj: 10
+2025-12-12 17:13:25 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+2025-12-12 17:13:36 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [1] Saved: 现场:郑州市区迎来今...
+2025-12-12 17:13:42 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [2] Saved: 郑州迎今冬首场降雪!...
+2025-12-12 17:13:44 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [3] Saved: 郑州今冬初雪温柔抵达...
+2025-12-12 17:13:46 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [4] Saved: 降雪量超4毫米!刚刚...
+2025-12-12 17:13:49 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [5] Saved: 郑州鹅毛大雪已到货...
+2025-12-12 17:13:50 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [6] Saved: 河南迎来大范围降雪天...
+2025-12-12 17:13:52 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [7] Saved: 河南今天迎今冬来最强...
+2025-12-12 17:13:57 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [8] Saved: 郑州发布暴雪蓝色预警...
+2025-12-12 17:13:59 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [9] Saved: 今冬初雪已到货!局部...
+2025-12-12 17:14:00 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [10] Saved: 雪下大了!郑州绕城高...
+2025-12-12 17:20:12 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Finished 郑州下雪啦: 10
+2025-12-12 18:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+2025-12-12 18:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+2025-12-12 18:05:29 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+2025-12-12 18:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+2025-12-12 18:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+2025-12-12 18:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 18:07:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 18:07:30 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+2025-12-12 18:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+2025-12-12 18:08:42 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 18:08:42 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 18:08:42 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+2025-12-12 18:08:42 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+2025-12-12 18:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+2025-12-12 18:10:57 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+2025-12-12 18:10:57 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 18:20:15 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+2025-12-12 18:20:15 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 19:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+2025-12-12 19:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+2025-12-12 19:05:30 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+2025-12-12 19:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+2025-12-12 19:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+2025-12-12 19:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 19:07:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 19:07:31 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+2025-12-12 19:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+2025-12-12 19:08:42 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 19:08:42 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 19:08:42 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+2025-12-12 19:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+2025-12-12 19:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+2025-12-12 19:10:59 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+2025-12-12 19:11:00 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 19:20:18 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+2025-12-12 19:20:18 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 20:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+2025-12-12 20:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+2025-12-12 20:05:30 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+2025-12-12 20:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+2025-12-12 20:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+2025-12-12 20:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 20:07:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 20:07:31 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+2025-12-12 20:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+2025-12-12 20:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 20:08:43 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 20:08:43 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+2025-12-12 20:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+2025-12-12 20:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+2025-12-12 20:11:02 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+2025-12-12 20:11:02 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 20:20:21 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+2025-12-12 20:20:21 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 21:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+2025-12-12 21:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+2025-12-12 21:05:30 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+2025-12-12 21:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+2025-12-12 21:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+2025-12-12 21:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 21:07:32 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 21:07:32 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+2025-12-12 21:07:32 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+2025-12-12 21:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 21:08:44 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 21:08:44 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+2025-12-12 21:08:44 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+2025-12-12 21:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+2025-12-12 21:11:05 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+2025-12-12 21:11:05 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 21:20:25 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+2025-12-12 21:20:25 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+2025-12-12 21:43:11 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-12 21:43:11 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-12 21:43:18 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-12 21:43:19 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-12 21:44:15 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-12 21:45:13 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-12 21:45:13 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-12 21:45:13 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-12 21:45:13 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-12 21:45:13 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-12 21:45:14 | DEBUG | jieba | Loading model cost 0.850 seconds.
+2025-12-12 21:45:14 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-12 21:45:14 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-12 21:45:14 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-12 21:45:24 | INFO | tools.image_description.api | ✅ LLM (qwen3:0.6b) 连接成功
+2025-12-12 21:45:24 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-12 21:45:24 | WARNING | nebula3.logger | Closing a connection that is in use
+2025-12-12 21:46:37 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-12 21:46:37 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-12 21:46:46 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-12 21:46:47 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-12 21:47:34 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-12-12 21:47:56 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-12 21:47:56 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-12 21:47:56 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-12 21:47:56 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-12 21:47:56 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+2025-12-12 21:47:56 | DEBUG | jieba | Loading model cost 0.713 seconds.
+2025-12-12 21:47:56 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-12 21:47:56 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-12 21:47:56 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-12 21:48:06 | INFO | tools.image_description.api | ✅ LLM (qwen3:0.6b) 连接成功
+2025-12-12 21:48:06 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-12 21:48:10 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+2025-12-12 21:48:41 | INFO | tools.capture_engine.api | [CaptureEngine] Manual STOP signal received for 1999390088777310210
+2025-12-12 21:48:43 | INFO | tools.capture_engine.api | [CaptureEngine] Manual STOP signal received for 1999389871956959234
+2025-12-12 21:48:54 | INFO | tools.capture_engine.api | 
+==================== [DEBUG: Platform Request] ====================
+2025-12-12 21:48:54 | INFO | tools.capture_engine.api | Raw JSON Received: {"start_time": "2025-12-12 21:48:53", "keywords": "下雪了", "end_time": "2025-12-19 21:48:53", "_id": "1999476554232635394"}
+2025-12-12 21:48:54 | INFO | tools.capture_engine.api | Parsed ID (req.id): '1999476554232635394'
+2025-12-12 21:48:54 | INFO | tools.capture_engine.api | ============================================================
+
+2025-12-12 21:48:54 | INFO | tools.capture_engine.api | [CaptureEngine] Task Initialized. ReqID='1999476554232635394', RealID='1999476554232635394'
+2025-12-12 21:48:54 | INFO | tools.capture_engine.api.scheduler.1999476554232635394 | [CaptureEngine] Scheduler started for 1999476554232635394
+2025-12-12 21:48:54 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 | [Toutiao] Task started. TaskID=1999476554232635394
+2025-12-12 21:48:54 | INFO | tools.capture_engine.platforms.weibo.1999476554232635394 | [Weibo] Task started. TaskID=1999476554232635394
+2025-12-12 21:48:54 | INFO | tools.capture_engine.platforms.weibo.1999476554232635394 | [Weibo] Searching: 下雪了
+2025-12-12 21:48:54 | INFO | tools.capture_engine.platforms.cctv.1999476554232635394 | [CCTV] Task started. TaskID=1999476554232635394
+2025-12-12 21:48:54 | INFO | tools.capture_engine.platforms.xinhua.1999476554232635394 | [Xinhua] Task started. TaskID=1999476554232635394
+2025-12-12 21:48:54 | INFO | tools.capture_engine.platforms.cnn.1999476554232635394 | [CNN] Task started. TaskID=1999476554232635394
+2025-12-12 21:48:54 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E4%B8%8B%E9%9B%AA%E4%BA%86&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 21:48:54 | WARNING | tools.capture_engine.platforms.weibo.1999476554232635394 | [Weibo] No posts parsed. keyword='下雪了', page=1, ok=-100, cards=0
+2025-12-12 21:48:54 | INFO | tools.capture_engine.platforms.weibo.1999476554232635394 | [Weibo] No post found. kw='下雪了', page=1
+2025-12-12 21:48:57 | INFO | tools.capture_engine.platforms.cctv.1999476554232635394 | [CCTV] Searching: 下雪了
+2025-12-12 21:48:57 | INFO | tools.capture_engine.platforms.xinhua.1999476554232635394 | [Xinhua] Searching: 下雪了
+2025-12-12 21:48:57 | INFO | tools.capture_engine.platforms.cnn.1999476554232635394 | [CNN] Searching: 下雪了
+2025-12-12 21:49:11 | INFO | tools.capture_engine.platforms.xinhua.1999476554232635394 |    [1] Saved: 北京现今冬首场明显降...
+2025-12-12 21:49:17 | INFO | tools.capture_engine.platforms.xinhua.1999476554232635394 |    [2] Saved: 业态新 创意新 哈尔...
+2025-12-12 21:49:22 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 | [Toutiao] Cookies loaded.
+2025-12-12 21:49:24 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 | [Toutiao] Searching: 下雪了
+2025-12-12 21:49:29 | INFO | tools.capture_engine.platforms.xinhua.1999476554232635394 |    [3] Saved: 丝路走笔丨在非洲“高...
+2025-12-12 21:49:32 | INFO | tools.capture_engine.api | [CaptureEngine] Manual STOP signal received for 1999476554232635394
+2025-12-12 21:49:32 | INFO | tools.capture_engine.api.scheduler.1999476554232635394 | [CaptureEngine] Manual STOP detected for 1999476554232635394.
+2025-12-12 21:49:33 | INFO | tools.capture_engine.platforms.cctv.1999476554232635394 |    [1] Saved: 故宫，下雪了...
+2025-12-12 21:49:35 | INFO | tools.capture_engine.platforms.xinhua.1999476554232635394 |    [4] Saved: 可可西里保护更有科技...
+2025-12-12 21:49:38 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 |    [1] Saved: 几天前,就预报有雪,...
+2025-12-12 21:49:41 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 |    [2] Saved: 北京下雪了!此刻你在...
+2025-12-12 21:49:43 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 |    [3] Saved: 天气情报站|飘飘洒洒...
+2025-12-12 21:49:44 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 |    [4] Saved: 刚刚 | 北京已经下...
+2025-12-12 21:49:47 | INFO | tools.capture_engine.platforms.toutiao.1999476554232635394 |    [5] Saved: 突然下雪了!纷纷飞花...

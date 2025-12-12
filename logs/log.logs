@@ -388,3 +388,230 @@ INFO:     117.71.104.18:57415 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
 2025-12-12 16:10:02 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [5] Saved: 注意啦！河南一地4人...
 [MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
 2025-12-12 16:13:21 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Finished 郑州下雪啦: 10
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:04:35 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:04:59 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:07 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:21 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [1] Saved: 素说美丽眼膜深度评测...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:05:23 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:23 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [2] Saved: 眼纹的克星:素说美丽...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:28 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [3] Saved: 素说美丽眼膜，让眼纹...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:31 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [4] Saved: 眼膜哪个品牌好?深度...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:33 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [5] Saved: 眼纹、眼袋不再怕，哪...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:05:34 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:35 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [6] Saved: 眼膜哪家强?素说美丽...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:37 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [7] Saved: 眼纹、眼袋不再，素说...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:40 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [8] Saved: 薛与薜的读音意义用法...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:43 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [9] Saved: 【还在考虑怎么买?我...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:05:46 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 |    [10] Saved: 百果园门店车厘子JJ...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:06:01 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:07:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 17:07:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:07:30 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:08:41 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 17:08:41 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:08:41 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:08:41 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:10:04 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 17:10:53 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Finished jjjj: 10
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:25 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:36 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [1] Saved: 现场:郑州市区迎来今...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:42 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [2] Saved: 郑州迎今冬首场降雪!...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:44 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [3] Saved: 郑州今冬初雪温柔抵达...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:46 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [4] Saved: 降雪量超4毫米!刚刚...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:49 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [5] Saved: 郑州鹅毛大雪已到货...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:50 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [6] Saved: 河南迎来大范围降雪天...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:52 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [7] Saved: 河南今天迎今冬来最强...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:57 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [8] Saved: 郑州发布暴雪蓝色预警...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:13:59 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [9] Saved: 今冬初雪已到货!局部...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:14:00 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [10] Saved: 雪下大了!郑州绕城高...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 17:20:12 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Finished 郑州下雪啦: 10
+INFO:     117.71.104.18:23407 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:05:29 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 18:07:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:07:30 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:08:42 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 18:08:42 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:08:42 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:08:42 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:10:57 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 18:10:57 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:20:15 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 18:20:15 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:05:30 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:07:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 19:07:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:07:31 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:08:42 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 19:08:42 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:08:42 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:10:59 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 19:11:00 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:20:18 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 19:20:18 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:05:30 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 20:07:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:07:31 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 20:08:43 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:08:43 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:11:02 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 20:11:02 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:20:21 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 20:20:21 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:04:42 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:05:07 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:05:30 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:05:45 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:06:08 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:07:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 21:07:32 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:07:32 | WARNING | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No posts parsed. keyword='郑州下雪啦', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:07:32 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] No post found. kw='郑州下雪啦', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:08:43 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 21:08:44 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:08:44 | WARNING | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No posts parsed. keyword='jjjj', page=1, ok=-100, cards=0
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:08:44 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] No post found. kw='jjjj', page=1
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:10:12 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:11:05 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 21:11:05 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Init search page failed for jjjj: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:20:25 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 21:20:25 | WARNING | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Init search page failed for 郑州下雪啦: 
+The connection to the page has been disconnected.
+Version: 4.1.1.2

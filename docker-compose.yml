@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: open_data_app
+    restart: always
+    ports:
+      - "8801:8801"
+    volumes:
+      - ./:/app                          # 代码挂载：改代码重启即生效
+      - ./logs:/app/logs                 # 日志挂载
+      - ./weibo_cookies.json:/app/weibo_cookies.json # 爬虫 Cookie
+      - ./toutiao_cookies.json:/app/toutiao_cookies.json
+    environment:
+      # === 1. 数据库配置 (指向宿主机) ===
+      # 请将 192.168.1.100 替换为您宿主机的真实局域网 IP
+      # 千万不要写 127.0.0.1，那是容器内部！
+      - MONGO_URI=mongodb://root:123456@192.168.1.100:27017/source_data?authSource=admin
+
+      # NebulaGraph 配置 (指向宿主机)
+      - NEBULA_IP=192.168.1.100
+      - NEBULA_PORT=9669
+
+      # === 2. 外部大模型配置 ===
+      # 指向您另一台部署了大模型的服务器 IP
+      - OLLAMA_HOST=http://192.168.1.200:11434
+
+      # === 3. 爬虫配置 ===
+      - DRIVER_PATH=/usr/local/bin/chromedriver
+      # 如果需要代理
+      # - HTTP_PROXY=http://192.168.1.100:7890
