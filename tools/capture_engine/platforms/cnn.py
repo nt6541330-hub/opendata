@@ -13,7 +13,8 @@ from common.db import get_cnn_storage
 from common.utils import get_logger
 from common.task_manager import TaskManager, MongoTaskHandler
 
-logger = get_logger(__name__)
+# 保留模块级 logger 仅用于非任务特定的调试
+_global_logger = get_logger(__name__)
 collection, fs = get_cnn_storage()
 
 
@@ -25,10 +26,18 @@ def translate_text(text: str, target_lang="zh") -> str:
 def _run_sync(keywords, days, interval, task_id):
     end_time = time.time() + days * 86400
     mongo_handler = None
+
+    # =========================================================================
+    # 【核心修复】创建任务专属 Logger
+    # =========================================================================
     if task_id:
+        task_logger = get_logger(f"{__name__}.{task_id}")
         mongo_handler = MongoTaskHandler(task_id)
-        logger.addHandler(mongo_handler)
-        logger.info(f"[CNN] Task started. TaskID={task_id}")
+        task_logger.addHandler(mongo_handler)
+        task_logger.info(f"[CNN] Task started. TaskID={task_id}")
+    else:
+        task_logger = _global_logger
+        task_logger.info(f"[CNN] Direct Run. Keywords={keywords}")
 
     opt = webdriver.ChromeOptions()
     opt.add_argument("--headless=new")
@@ -41,27 +50,28 @@ def _run_sync(keywords, days, interval, task_id):
         driver = webdriver.Chrome(service=Service(settings.DRIVER_PATH), options=opt)
         while time.time() < end_time:
             if task_id and TaskManager.should_stop(task_id):
-                logger.info("[CNN] Stop signal received.")
+                task_logger.info("[CNN] Stop signal received.")
                 break
 
             for kw in keywords:
                 if task_id and TaskManager.should_stop(task_id): break
-                _crawl_one(driver, kw, task_id)
+                # 【修改】传递 task_logger
+                _crawl_one(driver, kw, task_id, task_logger)
 
             if time.time() >= end_time: break
             if task_id and TaskManager.should_stop(task_id): break
             time.sleep(interval * 60)
 
     except Exception as e:
-        logger.error(f"[CNN] Error: {e}")
+        task_logger.error(f"[CNN] Error: {e}")
     finally:
         if driver: driver.quit()
         if mongo_handler:
             mongo_handler.flush()
-            logger.removeHandler(mongo_handler)
+            task_logger.removeHandler(mongo_handler)
 
 
-def _crawl_one(driver, kw, task_id):
+def _crawl_one(driver, kw, task_id, logger):
     logger.info(f"[CNN] Searching: {kw}")
     try:
         driver.get(f"https://edition.cnn.com/search?q={kw}&size=10&types=article")

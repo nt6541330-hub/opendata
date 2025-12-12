@@ -1,13 +1,13 @@
 nohup: ignoring input
-2025-12-11 15:16:33 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
-2025-12-11 15:16:33 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
+2025-12-12 15:57:27 | INFO | tools.text_annotation.api | 正在初始化极速文本标注模型: qwen3:0.6b ...
+2025-12-12 15:57:27 | INFO | tools.text_annotation.api | ✅ 文本标注模型 (qwen3:0.6b) 初始化完成 (均衡模式)
 /home/vipuser/miniconda3/envs/kaiyuan/lib/python3.11/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
   import pkg_resources
 WARNING:  Current configuration will not reload as not all conditions are met, please refer to documentation.
-INFO:     Started server process [2495741]
+INFO:     Started server process [3849450]
 INFO:     Waiting for application startup.
 >>> [KG Module] 服务初始化...
-2025-12-11 15:16:39 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
+2025-12-12 15:57:34 | INFO | nebula3.logger | Get connection to ('39.104.200.88', 41003)
 `torch_dtype` is deprecated! Use `dtype` instead!
     NebulaGraph 连接成功 (用于名称解析兜底)
     正在构建 名称-ID 索引...
@@ -15,39 +15,376 @@ INFO:     Waiting for application startup.
     [Sample Index] [('Th_POL-04157', 'Th_POL-04157'), ('中方要求日方收回涉台错误言论', 'Th_POL-04057'), ('Th_POL-04032', 'Th_POL-04032'), ('日本首相高市早苗发表涉台挑衅言论', 'Th_POL-02021'), ('Th_POL-01864', 'Th_POL-01864')]
     Loading TransE vectors...
     Loading LLM (Base + LoRA)...
-2025-12-11 15:16:41 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:01<00:06,  1.58s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:03<00:05,  1.89s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:05<00:03,  1.71s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:07<00:01,  1.89s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.49s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:08<00:00,  1.62s/it]
+2025-12-12 15:57:35 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:02<00:10,  2.56s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:05<00:08,  2.82s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:07<00:05,  2.58s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:09<00:02,  2.23s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.55s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:09<00:00,  1.98s/it]
     LLM 加载成功
 >>> [KG Module] 初始化完成
 >>> [KGE] 正在加载 Tokenizer...
 >>> [KGE] 正在加载 Model...
-2025-12-11 15:16:50 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
-Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:03,  1.32it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.38it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.40it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:02<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:02<00:00,  2.04it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:02<00:00,  1.71it/s]
+2025-12-12 15:57:46 | INFO | accelerate.utils.modeling | We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:02,  1.46it/s]Loading checkpoint shards:  40%|████      | 2/5 [00:01<00:02,  1.44it/s]Loading checkpoint shards:  60%|██████    | 3/5 [00:02<00:01,  1.43it/s]Loading checkpoint shards:  80%|████████  | 4/5 [00:02<00:00,  1.56it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:02<00:00,  2.07it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:02<00:00,  1.75it/s]
 /home/vipuser/miniconda3/envs/kaiyuan/lib/python3.11/site-packages/peft/utils/save_and_load.py:546: UserWarning: Some weights of PeftModelForCausalLM were not initialized from the model checkpoint and are being ignored because you passed `ignore_mismatched_sizes=True`: - base_model.model.lm_head.weight: found shape torch.Size([151670, 4096]) in the checkpoint and torch.Size([151936, 4096]) in the model instantiated
 - base_model.model.model.embed_tokens.weight: found shape torch.Size([151670, 4096]) in the checkpoint and torch.Size([151936, 4096]) in the model instantiated.
   warnings.warn(msg)
 ✅ [KGE] LoRA Adapter 加载成功
-2025-12-11 15:16:55 | INFO | tools.api_tools | 正在初始化工具集预热任务...
+2025-12-12 15:57:51 | INFO | tools.api_tools | 正在初始化工具集预热任务...
 INFO:     Application startup complete.
-2025-12-11 15:16:55 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
-2025-12-11 15:16:55 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
+2025-12-12 15:57:51 | INFO | tools.text_annotation.api | 🔥 [TextLabel-Speed] 预热中...
+2025-12-12 15:57:51 | INFO | tools.word_cloud.api | 🔥 [WordCloud] 正在加载 Jieba 字典...
 Building prefix dict from the default dictionary ...
-2025-12-11 15:16:55 | DEBUG | jieba | Building prefix dict from the default dictionary ...
+2025-12-12 15:57:51 | DEBUG | jieba | Building prefix dict from the default dictionary ...
 Loading model from cache /tmp/jieba.cache
-2025-12-11 15:16:55 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
-Loading model cost 0.728 seconds.
-2025-12-11 15:16:56 | DEBUG | jieba | Loading model cost 0.728 seconds.
+2025-12-12 15:57:51 | DEBUG | jieba | Loading model from cache /tmp/jieba.cache
+Loading model cost 0.710 seconds.
+2025-12-12 15:57:51 | DEBUG | jieba | Loading model cost 0.710 seconds.
 Prefix dict has been built successfully.
-2025-12-11 15:16:56 | DEBUG | jieba | Prefix dict has been built successfully.
-2025-12-11 15:16:56 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
-2025-12-11 15:16:56 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
+2025-12-12 15:57:52 | DEBUG | jieba | Prefix dict has been built successfully.
+2025-12-12 15:57:52 | INFO | tools.word_cloud.api | ✅ [WordCloud] Jieba 字典加载完成
+2025-12-12 15:57:52 | INFO | tools.image_description.api | 🔥 [ImageDesc] 开始加载多模态模型...
 Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
 Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
 Device set to use cuda:0
-2025-12-11 15:16:59 | INFO | tools.image_description.api | ✅ LLM (qwen3:32b) 连接成功
-2025-12-11 15:16:59 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
+2025-12-12 15:57:53 | INFO | tools.image_description.api | ✅ LLM (qwen3:0.6b) 连接成功
+2025-12-12 15:57:53 | INFO | tools.image_description.api | ✅ [ImageDesc] 模型加载流程结束
 INFO:     Uvicorn running on http://0.0.0.0:8801 (Press CTRL+C to quit)
-2025-12-11 15:17:02 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
-INFO:     117.71.104.18:29779 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
-INFO:     117.71.104.18:61088 - "GET /tools/wordcloud/generate?keyword=ggg HTTP/1.1" 200 OK
-INFO:     117.71.104.18:26587 - "POST /tools/capture/run HTTP/1.1" 200 OK
+2025-12-12 15:57:56 | INFO | tools.text_annotation.api | ✅ [TextLabel-Speed] 预热完成
+INFO:     117.71.104.18:33183 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+INFO:     117.71.104.18:58189 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+INFO:     117.71.104.18:60527 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+INFO:     117.71.104.18:43213 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+INFO:     117.71.104.18:61064 - "GET /tools/wordcloud/generate?keyword=jjjj HTTP/1.1" 200 OK
+2025-12-12 16:04:27 | INFO | tools.capture_engine.api | 
+==================== [DEBUG: Platform Request] ====================
+2025-12-12 16:04:27 | INFO | tools.capture_engine.api | Raw JSON Received: {"start_time": "2025-12-12 16:04:26", "keywords": "jjjj", "end_time": "2025-12-19 16:04:26", "_id": "1999389871956959234"}
+2025-12-12 16:04:27 | INFO | tools.capture_engine.api | Parsed ID (req.id): '1999389871956959234'
+2025-12-12 16:04:27 | INFO | tools.capture_engine.api | ============================================================
+
+2025-12-12 16:04:27 | INFO | tools.capture_engine.api | [CaptureEngine] Task Initialized. ReqID='1999389871956959234', RealID='1999389871956959234'
+INFO:     117.71.104.18:61064 - "POST /tools/capture/run HTTP/1.1" 200 OK
+2025-12-12 16:04:27 | INFO | tools.capture_engine.api.scheduler.1999389871956959234 | [CaptureEngine] Scheduler started for 1999389871956959234
+2025-12-12 16:04:27 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Task started. TaskID=1999389871956959234
+2025-12-12 16:04:27 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Task started. TaskID=1999389871956959234
+2025-12-12 16:04:27 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Searching: jjjj
+2025-12-12 16:04:27 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Task started. TaskID=1999389871956959234
+2025-12-12 16:04:27 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Task started. TaskID=1999389871956959234
+2025-12-12 16:04:27 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Task started. TaskID=1999389871956959234
+2025-12-12 16:04:28 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 16:04:28 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5239430573197544 Time: 2025-12-02 15:37:35
+2025-12-12 16:04:28 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [1] Saved: 5239430573197544
+2025-12-12 16:04:28 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5239430573197544&mid=5239430573197544 "HTTP/1.1 200 OK"
+2025-12-12 16:04:29 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5239430573197544 Time: 2025-12-02 15:37:35
+2025-12-12 16:04:29 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [2] Saved: 5239430573197544
+2025-12-12 16:04:29 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/007aRSEaly1i7wm6hm0s9j30u01fjn6p.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:04:29 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 | [Xinhua] Searching: jjjj
+2025-12-12 16:04:29 | INFO | tools.capture_engine.platforms.cnn.1999389871956959234 | [CNN] Searching: jjjj
+2025-12-12 16:04:29 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 | [CCTV] Searching: jjjj
+2025-12-12 16:04:30 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5239437597610616 Time: 2025-12-02 16:05:30
+2025-12-12 16:04:30 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [3] Saved: 5239437597610616
+2025-12-12 16:04:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5239437597610616&mid=5239437597610616 "HTTP/1.1 200 OK"
+2025-12-12 16:04:30 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/007aRSEaly1i7wm6hm0s9j30u01fjn6p.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler Retry Failed] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:31 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5239437597610616 Time: 2025-12-02 16:05:30
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:31 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [4] Saved: 5239437597610616
+2025-12-12 16:04:32 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/006MLbB4ly1i7wlolmgpzj30mi0r4n2r.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:32 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5239433034728021 Time: 2025-12-02 15:47:22
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:32 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [5] Saved: 5239433034728021
+2025-12-12 16:04:35 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5239433034728021&mid=5239433034728021 "HTTP/1.1 200 OK"
+2025-12-12 16:04:35 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/006MLbB4ly1i7wlolmgpzj30mi0r4n2r.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:35 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5239433034728021 Time: 2025-12-02 15:47:22
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:35 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [6] Saved: 5239433034728021
+2025-12-12 16:04:36 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/db78485fly1i82mf3uapej23dc4hs4qr.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:48 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 |    [1] Saved: 百果园遭遇市场寒冬 ...
+INFO:     117.71.104.18:58271 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+2025-12-12 16:04:48 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/db78485fly1i82mf96pg5j22dc35su0y.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:04:53 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82me2wgphj22dc35s4qr.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:55 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Cookies loaded.
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:58 | INFO | tools.capture_engine.platforms.xinhua.1999389871956959234 |    [2] Saved: 济南：价格下跌，车厘...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:04:58 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Searching: jjjj
+2025-12-12 16:04:59 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82meamw1dj235o47khdu.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:05:04 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82mexvti3j23dc4hsqv9.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:05:05 | WARNING | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Page/Context lost for keyword 'jjjj'. Stop scrolling.
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:05:05 | INFO | tools.capture_engine.platforms.toutiao.1999389871956959234 | [Toutiao] Finished jjjj: 0
+2025-12-12 16:05:15 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82mdwuvjbj22l93gcb2f.jpg "HTTP/1.1 200 OK"
+INFO:     117.71.104.18:49825 - "GET /tools/wordcloud/generate?keyword=%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6 HTTP/1.1" 200 OK
+2025-12-12 16:05:19 | INFO | tools.capture_engine.api | 
+==================== [DEBUG: Platform Request] ====================
+2025-12-12 16:05:19 | INFO | tools.capture_engine.api | Raw JSON Received: {"start_time": "2025-12-12 16:05:18", "keywords": "郑州下雪啦", "end_time": "2025-12-19 16:05:18", "_id": "1999390088777310210"}
+2025-12-12 16:05:19 | INFO | tools.capture_engine.api | Parsed ID (req.id): '1999390088777310210'
+2025-12-12 16:05:19 | INFO | tools.capture_engine.api | ============================================================
+
+2025-12-12 16:05:20 | INFO | tools.capture_engine.api | [CaptureEngine] Task Initialized. ReqID='1999390088777310210', RealID='1999390088777310210'
+INFO:     117.71.104.18:31526 - "POST /tools/capture/run HTTP/1.1" 200 OK
+2025-12-12 16:05:20 | INFO | tools.capture_engine.api.scheduler.1999390088777310210 | [CaptureEngine] Scheduler started for 1999390088777310210
+2025-12-12 16:05:20 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Task started. TaskID=1999390088777310210
+2025-12-12 16:05:20 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Task started. TaskID=1999390088777310210
+2025-12-12 16:05:21 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Searching: 郑州下雪啦
+2025-12-12 16:05:21 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Task started. TaskID=1999390088777310210
+2025-12-12 16:05:21 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Task started. TaskID=1999390088777310210
+2025-12-12 16:05:21 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Task started. TaskID=1999390088777310210
+2025-12-12 16:05:22 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 | [CCTV] Searching: 郑州下雪啦
+2025-12-12 16:05:22 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=1 "HTTP/1.1 200 OK"
+2025-12-12 16:05:22 | INFO | tools.capture_engine.platforms.cnn.1999390088777310210 | [CNN] Searching: 郑州下雪啦
+2025-12-12 16:05:22 | INFO | tools.capture_engine.platforms.xinhua.1999390088777310210 | [Xinhua] Searching: 郑州下雪啦
+2025-12-12 16:05:22 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/6dba2ea9ly1i87sm8owggj20u0140dl9.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler Retry Failed] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242941509735413 Time: 2025-12-12 08:08:48
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [1] Saved: 5242941509735413
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:05:29 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5241320205719391 Time: 2025-12-07 20:46:19
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:05:30 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [7] Saved: 5241320205719391
+2025-12-12 16:05:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5241320205719391&mid=5241320205719391 "HTTP/1.1 200 OK"
+2025-12-12 16:05:31 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242941509735413&mid=5242941509735413 "HTTP/1.1 200 OK"
+2025-12-12 16:05:31 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/db78485fly1i82mf3uapej23dc4hs4qr.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:05:31 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/6dba2ea9ly1i87sm8owggj20u0140dl9.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:31 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242941509735413 Time: 2025-12-12 08:08:48
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:32 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [2] Saved: 5242941509735413
+2025-12-12 16:05:32 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/007xVuDZly1i87u25y4kxj33401r0e82.jpg "HTTP/1.1 200 OK"
+INFO:     117.71.104.18:60619 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+INFO:     117.71.104.18:60619 - "GET /tools/wordcloud/generate?keyword=%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6 HTTP/1.1" 200 OK
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:47 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Cookies loaded.
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:48 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242954430284533 Time: 2025-12-12 09:00:08
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:48 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [3] Saved: 5242954430284533
+2025-12-12 16:05:49 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/db78485fly1i82mf96pg5j22dc35su0y.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:05:49 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242954430284533&mid=5242954430284533 "HTTP/1.1 200 OK"
+2025-12-12 16:05:49 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/007xVuDZly1i87u25y4kxj33401r0e82.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:50 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Searching: 郑州下雪啦
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:59 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242954430284533 Time: 2025-12-12 09:00:08
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:05:59 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [4] Saved: 5242954430284533
+2025-12-12 16:05:59 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/d839d901ly1i881j83kfij22c03401kz.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:05:59 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82me2wgphj22dc35s4qr.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:06:01 | INFO | tools.capture_engine.platforms.cctv.1999389871956959234 |    [1] Saved: 车厘子自由来了！但有...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:04 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [1] Saved: 现场:郑州市区迎来今...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:14 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [2] Saved: 郑州今冬初雪温柔抵达...
+INFO:     117.71.104.18:57415 - "GET /tools/wordcloud/generate HTTP/1.1" 200 OK
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:17 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243019085482493 Time: 2025-12-12 13:17:03
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:17 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [5] Saved: 5243019085482493
+2025-12-12 16:06:18 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82meamw1dj235o47khdu.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:06:18 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5243019085482493&mid=5243019085482493 "HTTP/1.1 200 OK"
+2025-12-12 16:06:18 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/d839d901ly1i881j83kfij22c03401kz.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:19 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [3] Saved: 郑州迎今冬首场降雪!...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:21 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [4] Saved: 河南迎来大范围降雪天...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243019085482493 Time: 2025-12-12 13:17:03
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [6] Saved: 5243019085482493
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:28 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [5] Saved: 河南今天迎今冬来最强...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242988083282458 Time: 2025-12-12 11:13:52
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [7] Saved: 5242988083282458
+2025-12-12 16:06:28 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82mexvti3j23dc4hsqv9.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:06:28 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242988083282458&mid=5242988083282458 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242988083282458 Time: 2025-12-12 11:13:52
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [8] Saved: 5242988083282458
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242968073568627 Time: 2025-12-12 09:54:21
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [9] Saved: 5242968073568627
+2025-12-12 16:06:29 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5242968073568627&mid=5242968073568627 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5242968073568627 Time: 2025-12-12 09:54:21
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [10] Saved: 5242968073568627
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5239718788466765 Time: 2025-12-03 10:42:51
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:29 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [11] Saved: 5239718788466765
+2025-12-12 16:06:30 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5239718788466765&mid=5239718788466765 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5239718788466765 Time: 2025-12-03 10:42:51
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:30 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [12] Saved: 5239718788466765
+2025-12-12 16:06:30 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006UwFtEly1i885v12gb5j335s2dcqv6.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:32 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [6] Saved: 郑州发布暴雪蓝色预警...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:41 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [7] Saved: 今冬初雪已到货!局部...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:44 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243056859383611 Time: 2025-12-12 15:47:09
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:45 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [13] Saved: 5243056859383611
+2025-12-12 16:06:46 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/db78485fly1i82mdwuvjbj22l93gcb2f.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:06:46 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5243056859383611&mid=5243056859383611 "HTTP/1.1 200 OK"
+2025-12-12 16:06:46 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006UwFtEly1i885v12gb5j335s2dcqv6.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:48 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [8] Saved: 河南今日6市中到大雪...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:51 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [9] Saved: 12日郑州有中到大雪...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:55 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243056859383611 Time: 2025-12-12 15:47:09
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:56 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [14] Saved: 5243056859383611
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:58 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243054034256282 Time: 2025-12-12 15:35:55
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:06:59 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [15] Saved: 5243054034256282
+2025-12-12 16:07:00 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5243054034256282&mid=5243054034256282 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:01 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 |    [10] Saved: 今夜起河南迎明显雨雪...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:02 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243054034256282 Time: 2025-12-12 15:35:55
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:03 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [16] Saved: 5243054034256282
+2025-12-12 16:07:04 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/0083dSo3ly1i8854ya8iuj31400u04h5.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:08 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5241320205719391 Time: 2025-12-07 20:46:19
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:08 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [8] Saved: 5241320205719391
+2025-12-12 16:07:08 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/0083dSo3ly1i8854zuhudj30u01407j4.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:08 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/007cOaiPly1i7d25mknuqj30tz0qctcc.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:09 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5233309556147854 Time: 2025-11-15 18:14:51
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:10 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [9] Saved: 5233309556147854
+2025-12-12 16:07:10 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/0083dSo3ly1i88551ibcij30u01407ci.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:10 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5233309556147854&mid=5233309556147854 "HTTP/1.1 200 OK"
+2025-12-12 16:07:10 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/007cOaiPly1i7d25mknuqj30tz0qctcc.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:12 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5233309556147854 Time: 2025-11-15 18:14:51
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:12 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [10] Saved: 5233309556147854
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:12 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243051205462496 Time: 2025-12-12 15:24:41
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:12 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [17] Saved: 5243051205462496
+2025-12-12 16:07:12 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5243051205462496&mid=5243051205462496 "HTTP/1.1 200 OK"
+2025-12-12 16:07:12 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zsl30u2j33402c0hdu.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:12 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/0083dSo3ly1i8854ya8iuj31400u04h5.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:14 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/0083dSo3ly1i8854zuhudj30u01407j4.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:18 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/0083dSo3ly1i88551ibcij30u01407ci.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:19 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zsog2vcj32c0340b2a.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:19 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243051205462496 Time: 2025-12-12 15:24:41
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:20 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [18] Saved: 5243051205462496
+2025-12-12 16:07:20 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/008uC2tily1i88579t25uj30u0140k9i.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:25 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243051178201224 Time: 2025-12-12 15:24:35
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:25 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [19] Saved: 5243051178201224
+2025-12-12 16:07:25 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zss9wnjj32c0340e81.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:25 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5243051178201224&mid=5243051178201224 "HTTP/1.1 200 OK"
+2025-12-12 16:07:25 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/008uC2tily1i88579t25uj30u0140k9i.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 | [Weibo] Saved: 5243051178201224 Time: 2025-12-12 15:24:35
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:28 | INFO | tools.capture_engine.platforms.weibo.1999390088777310210 |    [20] Saved: 5243051178201224
+2025-12-12 16:07:28 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zswglf3j32c03401ky.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:29 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=2 "HTTP/1.1 200 OK"
+2025-12-12 16:07:29 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=3 "HTTP/1.1 200 OK"
+2025-12-12 16:07:29 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3D%E9%83%91%E5%B7%9E%E4%B8%8B%E9%9B%AA%E5%95%A6&page_type=searchall&page=4 "HTTP/1.1 200 OK"
+2025-12-12 16:07:33 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/006o6h6ogy1i68zsxqertj33402c04qp.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:35 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zt2xkksj33402c0qv6.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:07:35 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [1] Saved: 【8点见】下雪啦！北...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:40 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5220748622300054 Time: 2025-10-12 02:22:11
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:07:40 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [11] Saved: 5220748622300054
+2025-12-12 16:07:40 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5220748622300054&mid=5220748622300054 "HTTP/1.1 200 OK"
+2025-12-12 16:07:40 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zsl30u2j33402c0hdu.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:44 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zsog2vcj32c0340b2a.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:48 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zss9wnjj32c0340e81.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:50 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zswglf3j32c03401ky.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:53 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/006o6h6ogy1i68zsxqertj33402c04qp.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:07:55 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/006o6h6ogy1i68zt2xkksj33402c0qv6.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:00 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5220748622300054 Time: 2025-10-12 02:22:11
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:00 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [12] Saved: 5220748622300054
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:01 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5234838983412105 Time: 2025-11-19 23:32:15
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:01 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [13] Saved: 5234838983412105
+2025-12-12 16:08:01 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5234838983412105&mid=5234838983412105 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:01 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5234838983412105 Time: 2025-11-19 23:32:15
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:01 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [14] Saved: 5234838983412105
+2025-12-12 16:08:03 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/85aafb9fly1i7q2d39ww8j21ba0zgwj8.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:04 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/85aafb9fly1i7q2ej7o9ij23402c0qv5.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:07 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/85aafb9fly1i7q2d2xsuoj23pc2s0e82.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:13 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/85aafb9fly1i7q2d20j5mj22c0340qv6.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:18 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5237384448574494 Time: 2025-11-27 00:07:01
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:18 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [15] Saved: 5237384448574494
+2025-12-12 16:08:18 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5237384448574494&mid=5237384448574494 "HTTP/1.1 200 OK"
+2025-12-12 16:08:18 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/85aafb9fly1i7q2d39ww8j21ba0zgwj8.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:19 | INFO | httpx | HTTP Request: GET https://wx1.sinaimg.cn/large/85aafb9fly1i7q2ej7o9ij23402c0qv5.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:22 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/85aafb9fly1i7q2d2xsuoj23pc2s0e82.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:26 | INFO | httpx | HTTP Request: GET https://wx4.sinaimg.cn/large/85aafb9fly1i7q2d20j5mj22c0340qv6.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:31 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5237384448574494 Time: 2025-11-27 00:07:01
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:31 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [16] Saved: 5237384448574494
+2025-12-12 16:08:31 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/007ZPvbsly1i5vferh0rmj313v18j19e.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:32 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/007ZPvbsly1i5vfesj46xj31401hcqmj.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:33 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/007ZPvbsly1i5vfet9t2uj310p1cynbj.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:34 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/007ZPvbsly1i5vfety5k5j31360szan8.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:08:34 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [2] Saved: “下雪啦！” 看大熊...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:35 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5216496301114872 Time: 2025-09-30 08:44:59
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:35 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [17] Saved: 5216496301114872
+2025-12-12 16:08:35 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5216496301114872&mid=5216496301114872 "HTTP/1.1 200 OK"
+2025-12-12 16:08:36 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/007ZPvbsly1i5vferh0rmj313v18j19e.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:37 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/007ZPvbsly1i5vfesj46xj31401hcqmj.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:38 | INFO | httpx | HTTP Request: GET https://wx2.sinaimg.cn/large/007ZPvbsly1i5vfet9t2uj310p1cynbj.jpg "HTTP/1.1 200 OK"
+2025-12-12 16:08:38 | INFO | httpx | HTTP Request: GET https://wx3.sinaimg.cn/large/007ZPvbsly1i5vfety5k5j31360szan8.jpg "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:39 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5216496301114872 Time: 2025-09-30 08:44:59
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:39 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [18] Saved: 5216496301114872
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:40 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5219734140486175 Time: 2025-10-09 07:11:00
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:40 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [19] Saved: 5219734140486175
+2025-12-12 16:08:40 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/comments/show?id=5219734140486175&mid=5219734140486175 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:40 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 | [Weibo] Saved: 5219734140486175 Time: 2025-10-09 07:11:00
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999389871956959234"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999389871956959234"}'}
+2025-12-12 16:08:40 | INFO | tools.capture_engine.platforms.weibo.1999389871956959234 |    [20] Saved: 5219734140486175
+2025-12-12 16:08:40 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=2 "HTTP/1.1 200 OK"
+2025-12-12 16:08:41 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=3 "HTTP/1.1 200 OK"
+2025-12-12 16:08:41 | INFO | httpx | HTTP Request: GET https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D1%26q%3Djjjj&page_type=searchall&page=4 "HTTP/1.1 200 OK"
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:09:06 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [3] Saved: 下雪啦！黑龙江晒出超...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:09:34 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [4] Saved: 这里下雪啦！中秋邂逅...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:10:02 | INFO | tools.capture_engine.platforms.cctv.1999390088777310210 |    [5] Saved: 注意啦！河南一地4人...
+[MongoTaskHandler WriteError] The field 'logs' must be an array but is of type null in document {_id: "1999390088777310210"}, full error: {'index': 0, 'code': 2, 'errmsg': 'The field \'logs\' must be an array but is of type null in document {_id: "1999390088777310210"}'}
+2025-12-12 16:13:21 | INFO | tools.capture_engine.platforms.toutiao.1999390088777310210 | [Toutiao] Finished 郑州下雪啦: 10

@@ -1,5 +1,7 @@
 import time
 import logging
+import traceback
+import pymongo  # 【新增】需要导入 pymongo 以捕获特定错误
 from datetime import datetime
 from bson import ObjectId
 from common.db import get_task_collection
@@ -137,14 +139,46 @@ class MongoTaskHandler(logging.Handler):
             return
         try:
             # 基于 _id 写入日志
-            self.collection.update_one(
+            result = self.collection.update_one(
                 {"_id": self.oid},
                 {
                     "$push": {"logs": {"$each": self.buffer}},
                     "$inc": {"line_count": len(self.buffer)}
                 }
             )
+
+            if result.matched_count == 0:
+                print(f"[MongoTaskHandler Warning] No document matches _id: {self.oid}")
+
             self.buffer = []
             self.last_flush = time.time()
-        except Exception:
-            pass
+
+        except pymongo.errors.WriteError as e:
+            # 【关键修复】捕获 "Cannot apply $inc to a value of non-numeric type" (Code 14)
+            # 这意味着数据库里 line_count 是 null，我们需要手动修复它
+            if e.code == 14 or "non-numeric type" in str(e):
+                try:
+                    # 1. 强制将 line_count 初始化为 0
+                    self.collection.update_one(
+                        {"_id": self.oid},
+                        {"$set": {"line_count": 0}}
+                    )
+                    # 2. 重试写入日志
+                    self.collection.update_one(
+                        {"_id": self.oid},
+                        {
+                            "$push": {"logs": {"$each": self.buffer}},
+                            "$inc": {"line_count": len(self.buffer)}
+                        }
+                    )
+                    self.buffer = []
+                    self.last_flush = time.time()
+                except Exception as retry_e:
+                    print(f"[MongoTaskHandler Retry Failed] {retry_e}")
+            else:
+                # 其他写入错误则打印
+                print(f"[MongoTaskHandler WriteError] {e}")
+
+        except Exception as e:
+            print(f"[MongoTaskHandler Exception] Failed to write logs: {e}")
+            traceback.print_exc()

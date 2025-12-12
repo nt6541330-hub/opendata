@@ -361,17 +361,20 @@ async def reason_graph(request: CompletionRequest):
                 task_str = "(?,r,t)"
                 res_h, res_t = cand_id, task['src']
 
+                # =========== 修改开始 ===========
             suggestions.append(SuggestionItem(
                 task=task_str,
-                h=res_h,
+                h=h_show,  # <--- 原来是 res_h (ID)，改为 h_show (Name)
                 r=task['rel'],
-                t=res_t,
+                t=t_show,  # <--- 原来是 res_t (ID)，改为 t_show (Name)
                 score_kge=kge_score,
                 score_llm=llm_score,
                 score_fused=fused_score,
-                h_name=h_show,
+                h_name=h_show,  # 这里的冗余字段可以保留，也可以根据前端需求决定是否删除
                 t_name=t_show
             ))
+                # =========== 修改结束 ===========
+
 
     suggestions.sort(key=lambda x: x.score_fused, reverse=True)
     suggestions = suggestions[:params.max_return]

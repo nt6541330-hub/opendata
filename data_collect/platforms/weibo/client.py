@@ -2,13 +2,15 @@ import json
 import os
 from typing import Any, Dict, List, Optional
 import httpx
+import logging
 
 from config.settings import settings
 from common.utils import get_logger
 from .exception import CookieInvalidError, ApiError
 from .field import WeiboPost, WeiboImage, WeiboComment
 
-logger = get_logger(__name__)
+# 保留全局 logger 仅作为默认值，或者用于非实例方法的日志
+_global_logger = get_logger(__name__)
 
 
 class WeiboClient:
@@ -17,16 +19,24 @@ class WeiboClient:
     """
     BASE_M_API = "https://m.weibo.cn/api"
 
-    def __init__(self) -> None:
+    def __init__(self, logger: Optional[logging.Logger] = None) -> None:
+        """
+        初始化
+        :param logger: 传入的任务专属 logger，如果未传则使用全局 logger
+        """
         self.timeout = 15
         self.proxy = settings.HTTP_PROXY
         self._client: Optional[httpx.AsyncClient] = None
+
+        # 使用传入的 logger，如果没有则使用全局的
+        self.logger = logger if logger else _global_logger
+
         self._cookie_header = self._load_cookie_header()
 
     def _load_cookie_header(self) -> str:
         cookie_file = settings.WEIBO_COOKIE_FILE
         if not os.path.exists(cookie_file):
-            logger.warning(f"[Weibo] Cookie file not found: {cookie_file}")
+            self.logger.warning(f"[Weibo] Cookie file not found: {cookie_file}")
             return ""
 
         try:
@@ -44,7 +54,7 @@ class WeiboClient:
                 return ""
             return "; ".join(parts)
         except Exception as e:
-            logger.error(f"[Weibo] Failed to load cookie: {e}")
+            self.logger.error(f"[Weibo] Failed to load cookie: {e}")
             return ""
 
     async def _get_client(self) -> httpx.AsyncClient:
@@ -157,7 +167,7 @@ class WeiboClient:
 
         if not posts:
             # 增加一点调试信息，方便排查是结构问题还是风控问题
-            logger.warning(
+            self.logger.warning(
                 f"[Weibo] No posts parsed. keyword={keyword!r}, page={page}, "
                 f"ok={data.get('ok')}, cards={len(cards)}"
             )

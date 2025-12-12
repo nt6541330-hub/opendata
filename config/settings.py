@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     TARGET_NODE_COLLECTION: str = "extract_element_target"
     KNOWLEDGE_COLLECTION_TARGET: str = "knowledge_target"
     EDGES_COLLECTION: str = "event_event_edges"
-    KNOWLEDGE_COLLECTION_EVENT: str = "hotspot_events"
+    KNOWLEDGE_COLLECTION_EVENT: str = "hotspot_event"
 
     # --- GridFS 存储桶 ---
     BUCKET_WEIBO: str = "fs_weibo"

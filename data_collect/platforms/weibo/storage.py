@@ -1,5 +1,6 @@
 import asyncio
 import os
+import logging
 from datetime import datetime
 from urllib.parse import urlparse
 from mimetypes import guess_type
@@ -17,14 +18,22 @@ from .field import WeiboPost, WeiboComment
 from datetime import datetime
 from data_collect.utils.html import strip_html
 
-logger = get_logger(__name__)
+# 保留全局 logger 仅作为默认值
+_global_logger = get_logger(__name__)
 
 
 class WeiboMongoStore:
-    def __init__(self) -> None:
+    def __init__(self, logger: Optional[logging.Logger] = None) -> None:
+        """
+        初始化
+        :param logger: 传入的任务专属 logger，如果未传则使用全局 logger
+        """
         self.coll, self.fs = get_weibo_storage()
         self.coll.create_index([("note_id", ASCENDING)], unique=True)
         self.proxy = settings.HTTP_PROXY
+
+        # 使用传入的 logger
+        self.logger = logger if logger else _global_logger
 
     async def _download_image(self, url: str) -> Optional[bytes]:
         if not url: return None
@@ -40,7 +49,7 @@ class WeiboMongoStore:
                 if resp.status_code == 200:
                     return resp.content
         except Exception as e:
-            logger.warning(f"[mongo] download image error url={url} err={e}")
+            self.logger.warning(f"[mongo] download image error url={url} err={e}")
         return None
 
     async def _save_image_to_gridfs(self, data: bytes, url: str) -> ObjectId:
@@ -106,7 +115,7 @@ class WeiboMongoStore:
         doc = {
             "note_id": post.note_id,
             "keyword": post.keyword,
-            "title": title,          # <-- 新字段
+            "title": title,  # <-- 新字段
             "content": post_text,
             "comments": comments_text,
             "images": image_ids,
@@ -117,4 +126,4 @@ class WeiboMongoStore:
         }
 
         self.coll.update_one({"note_id": post.note_id}, {"$set": doc}, upsert=True)
-        logger.info(f"[Weibo] Saved: {post.note_id} Time: {pub_time}")
+        self.logger.info(f"[Weibo] Saved: {post.note_id} Time: {pub_time}")

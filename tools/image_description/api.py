@@ -26,7 +26,7 @@ logger = get_logger(__name__)
 router = APIRouter()
 
 # ===== 配置参数 =====
-LLM_MODEL = "qwen3:32b"
+LLM_MODEL = "qwen3:0.6b"
 YOLO_CONF = 0.7
 YOLO_IOU = 0.7
 YOLO_IMGSZ = 800
